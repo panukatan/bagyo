@@ -1,0 +1,16 @@
+citHeader("To cite bagyo in publications use:")
+
+citEntry(
+  entry    = "Manual",
+  title    = "bagyo: Philippine Tropical Cyclones Data",
+  author   = person("Ernest Guevarra"),
+  year     = "2024",
+  note     = "R package version 0.0.0.9000",
+  url      = "https://panukatan.io/bagyo/",
+  textVersion = paste(
+    "Ernest Guevarra (2024).",
+    "bagyo: Philippine Tropical Cyclones Data",
+    "R package version 0.0.0.9000",
+    "URL https://panukatan.io/bagyo/"
+  )
+)
