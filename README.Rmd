@@ -11,6 +11,9 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+bagyo_colours <- c("#e5be72", "#4d4d4d", "#5ada3d", "#5630d3", "#e51707",
+                   "#9c5e60", "#465b92", "#4b876e", "#152127", "#5d0505")
 ```
 
 # bagyo: Philippine Tropical Cyclones Data <img src="man/figures/logo.png" width="200" align="right" />
@@ -26,7 +29,15 @@ knitr::opts_chunk$set(
 
 Oceans and seas significantly impact continental weather, with evaporation from the sea surface driving cloud formation and precipitation. Tropical cyclones, warm-core low-pressure systems, form over warm oceans where temperatures exceed 26°C, precipitated by the release of latent heat from condensation. These cyclones, known by various names depending on the region, have organized circulations and develop primarily in tropical and subtropical waters, except in regions with cooler sea surface temperatures and high vertical wind shears. They reach peak intensity over warm tropical waters and weaken upon landfall, often causing extensive damage before dissipating.
 
-The Philippines frequently experiences tropical cyclones (called **bagyo** in the Filipino language) because of its geographical position. These cyclones typically bring heavy rainfall, leading to widespread flooding, as well as strong winds that cause significant damage to human life, crops, and property. Data on cyclones are collected and curated by the Philippine Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA) and made available through its website. This package contains Philippine Tropical Cyclone data in a machine-readable format. It is hoped that this data package provides an interesting and unique dataset for data exploration and visualisation.
+The Philippines frequently experiences tropical cyclones (called **bagyo** in the Filipino language) because of its geographical position. These cyclones typically bring heavy rainfall, leading to widespread flooding, as well as strong winds that cause significant damage to human life, crops, and property. Data on cyclones are collected and curated by the [Philippine Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA)](https://www.pagasa.dost.gov.ph/).
+
+This package contains Philippine Tropical Cyclone data from 2017 to 2020 in a machine-readable format. It is hoped that this data package provides an interesting and unique dataset for data exploration and visualisation.
+
+## About the `tropical_cyclones` data
+
+The `bagyo` package contains the `tropical_cyclones` dataset. This dataset was taken from annual reports on Philippine tropical cyclones prepared and released by [PAGASA](https://www.pagasa.dost.gov.ph/) at its [website](https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report).
+
+
 
 ## Installation
 
