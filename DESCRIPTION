@@ -29,5 +29,6 @@ Encoding: UTF-8
 Language: en-GB
 LazyData: true
 RoxygenNote: 7.3.1
+Roxygen: list(markdown = TRUE)
 URL: https://panukatan.io/bagyo/, https://github.com/panukatan/bagyo
 BugReports: https://github.com/panukatan/bagyo/issues
