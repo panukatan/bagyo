@@ -90,7 +90,67 @@
 <!-- badges: start -->
 
 <p>Oceans and seas significantly impact continental weather, with evaporation from the sea surface driving cloud formation and precipitation. Tropical cyclones, warm-core low-pressure systems, form over warm oceans where temperatures exceed 26°C, precipitated by the release of latent heat from condensation. These cyclones, known by various names depending on the region, have organized circulations and develop primarily in tropical and subtropical waters, except in regions with cooler sea surface temperatures and high vertical wind shears. They reach peak intensity over warm tropical waters and weaken upon landfall, often causing extensive damage before dissipating.</p>
-<p>The Philippines frequently experiences tropical cyclones (called <strong>bagyo</strong> in the Filipino language) because of its geographical position. These cyclones typically bring heavy rainfall, leading to widespread flooding, as well as strong winds that cause significant damage to human life, crops, and property. Data on cyclones are collected and curated by the Philippine Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA) and made available through its website. This package contains Philippine Tropical Cyclone data in a machine-readable format. It is hoped that this data package provides an interesting and unique dataset for data exploration and visualisation.</p>
+<p>The Philippines frequently experiences tropical cyclones (called <strong>bagyo</strong> in the Filipino language) because of its geographical position. These cyclones typically bring heavy rainfall, leading to widespread flooding, as well as strong winds that cause significant damage to human life, crops, and property. Data on cyclones are collected and curated by the <a href="https://www.pagasa.dost.gov.ph/" class="external-link">Philippine Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA)</a>.</p>
+<p>This package contains Philippine Tropical Cyclone data from 2017 to 2020 in a machine-readable format. It is hoped that this data package provides an interesting and unique dataset for data exploration and visualisation.</p>
+<div class="section level2">
+<h2 id="about-the-tropical_cyclones-data">About the <code>tropical_cyclones</code> data<a class="anchor" aria-label="anchor" href="#about-the-tropical_cyclones-data"></a>
+</h2>
+<p>The <code>bagyo</code> package contains the <code>tropical_cyclones</code> dataset. This dataset was taken from annual reports on Philippine tropical cyclones prepared and released by <a href="https://www.pagasa.dost.gov.ph/" class="external-link">PAGASA</a> at its <a href="https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report" class="external-link">website</a> in PDF format.</p>
+<p>Because the reports are in PDF format and the information described above are in tables within the documents, scripts for scraping the desired data were developed and implemented to arrive at the <code>tropical_cyclones</code> dataset. The data scraping script can be viewed <a href="https://github.com/panukatan/bagyo/blob/main/data-raw/process_data.R" class="external-link">here</a>.</p>
+<p>The following information is available from the dataset:</p>
+<table class="table">
+<colgroup>
+<col width="15%">
+<col width="84%">
+</colgroup>
+<thead><tr class="header">
+<th align="left"><strong>Variable</strong></th>
+<th align="left"><strong>Description</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left"><em>year</em></td>
+<td align="left">Year</td>
+</tr>
+<tr class="even">
+<td align="left"><em>category_code</em></td>
+<td align="left">Tropical cyclone category code</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>category_name</em></td>
+<td align="left">Tropical cyclone category name</td>
+</tr>
+<tr class="even">
+<td align="left"><em>name</em></td>
+<td align="left">Name given to the tropical cyclone by Philippine authorities</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>rsmc_name</em></td>
+<td align="left">Name given to the tropical cyclone by the Regional Specialized Meteorological Centre (RSMC)</td>
+</tr>
+<tr class="even">
+<td align="left"><em>start</em></td>
+<td align="left">Date and time at which cyclone enters Philippine area of responsibility (PAR)</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>end</em></td>
+<td align="left">Date and time at which cyclone leaves Philippine area of responsibility (PAR)</td>
+</tr>
+<tr class="even">
+<td align="left"><em>pressure</em></td>
+<td align="left">Peak central pressure in <em>hPa</em>
+</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>speed</em></td>
+<td align="left">Maximum sustained wind speed in <em>km/h</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p>This metadata can be viewed in R through a call to <code><a href="reference/tropical_cyclones.html">?tropical_cyclones</a></code> in the R console.</p>
+<p>Whilst tropical cyclones have ravaged the Philippines far earlier than 2017 and more currently than 2020, official and publicly available data for the information described above is only available in the reports for years 2017 to 2020. Earlier documents of this annual reporting pre-2017 have been produced but are not available on the PAGASA website. These reports of the tropical cyclone season (re-started in 2019) are published within two years after the termination of the season. Hence, the most recent report is only up to 2020.</p>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -100,16 +160,110 @@
 <span>  <span class="st">"bagyo"</span>,</span>
 <span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'https://panukatan.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
+<p>Once the <code>bagyo</code> package has been installed, the <code>tropical_cyclones</code> dataset can be loaded into R as follows:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://panukatan.io/bagyo/">bagyo</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">"bagyo"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">tropical_cyclones</span></span>
+<span><span class="co">#&gt; # A tibble: 86 × 9</span></span>
+<span><span class="co">#&gt;     year category_code category_name         name  rsmc_name start              </span></span>
+<span><span class="co">#&gt;    &lt;dbl&gt; &lt;fct&gt;         &lt;fct&gt;                 &lt;chr&gt; &lt;chr&gt;     &lt;dttm&gt;             </span></span>
+<span><span class="co">#&gt;  1  2017 TD            Tropical Depression   Auri… &lt;NA&gt;      2017-01-07 08:00:00</span></span>
+<span><span class="co">#&gt;  2  2017 TD            Tropical Depression   Bisi… &lt;NA&gt;      2017-02-03 14:00:00</span></span>
+<span><span class="co">#&gt;  3  2017 TD            Tropical Depression   Cris… &lt;NA&gt;      2017-04-14 14:00:00</span></span>
+<span><span class="co">#&gt;  4  2017 TS            Tropical Storm        Dante Muifa     2017-04-26 08:00:00</span></span>
+<span><span class="co">#&gt;  5  2017 STS           Severe Tropical Storm Emong Nanmadol  2017-07-02 02:00:00</span></span>
+<span><span class="co">#&gt;  6  2017 TD            Tropical Depression   Fabi… Roke      2017-07-22 02:00:00</span></span>
+<span><span class="co">#&gt;  7  2017 TY            Typhoon               Gorio Nesat     2017-07-25 14:00:00</span></span>
+<span><span class="co">#&gt;  8  2017 TS            Tropical Storm        Huan… Haitang   2017-07-30 02:00:00</span></span>
+<span><span class="co">#&gt;  9  2017 STS           Severe Tropical Storm Isang Hato      2017-08-20 08:00:00</span></span>
+<span><span class="co">#&gt; 10  2017 TS            Tropical Storm        Joli… Pakhar    2017-08-24 14:00:00</span></span>
+<span><span class="co">#&gt; # ℹ 76 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 3 more variables: end &lt;dttm&gt;, pressure &lt;int&gt;, speed &lt;int&gt;</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
+<div class="section level3">
+<h3 id="demonstrate-tidy-data-wrangling">Demonstrate tidy data wrangling<a class="anchor" aria-label="anchor" href="#demonstrate-tidy-data-wrangling"></a>
+</h3>
+<div class="section level4">
+<h4 id="tropical-cyclones-are-interesting-to-summarise">Tropical cyclones are interesting to summarise<a class="anchor" aria-label="anchor" href="#tropical-cyclones-are-interesting-to-summarise"></a>
+</h4>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Get yearly mean cyclone pressure and speed ----</span></span>
+<span><span class="va">tropical_cyclones</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span>mean_pressure <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pressure</span><span class="op">)</span>, mean_speed <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">speed</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 4 × 3</span></span>
+<span><span class="co">#&gt;    year mean_pressure mean_speed</span></span>
+<span><span class="co">#&gt;   &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1  2017          986.       88.0</span></span>
+<span><span class="co">#&gt; 2  2018          961.       66.7</span></span>
+<span><span class="co">#&gt; 3  2019          976.       59.0</span></span>
+<span><span class="co">#&gt; 4  2020          973.       62.0</span></span>
+<span></span>
+<span><span class="co">## Get cyclone category mean pressure and speed ----</span></span>
+<span><span class="va">tropical_cyclones</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">category_name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span></span>
+<span>    n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html" class="external-link">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mean_pressure <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pressure</span><span class="op">)</span>, </span>
+<span>    mean_speed <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">speed</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 5 × 4</span></span>
+<span><span class="co">#&gt;   category_name             n mean_pressure mean_speed</span></span>
+<span><span class="co">#&gt;   &lt;fct&gt;                 &lt;int&gt;         &lt;dbl&gt;      &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 Tropical Depression      23          996.       39.8</span></span>
+<span><span class="co">#&gt; 2 Tropical Storm           25          986.       61.6</span></span>
+<span><span class="co">#&gt; 3 Severe Tropical Storm    15          978.       75  </span></span>
+<span><span class="co">#&gt; 4 Typhoon                  21          941.      102. </span></span>
+<span><span class="co">#&gt; 5 Super Typhoon             2          908.      112.</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="tropical-cyclones-are-useful-in-learning-how-to-work-with-dates">Tropical cyclones are useful in learning how to work with dates<a class="anchor" aria-label="anchor" href="#tropical-cyclones-are-useful-in-learning-how-to-work-with-dates"></a>
+</h4>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org" class="external-link">lubridate</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Get cyclone category mean duration (in hours) ----</span></span>
+<span><span class="va">tropical_cyclones</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>duration <span class="op">=</span> <span class="va">end</span> <span class="op">-</span> <span class="va">start</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">category_name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span>mean_duration <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">duration</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 5 × 2</span></span>
+<span><span class="co">#&gt;   category_name         mean_duration  </span></span>
+<span><span class="co">#&gt;   &lt;fct&gt;                 &lt;drtn&gt;         </span></span>
+<span><span class="co">#&gt; 1 Tropical Depression    46.69565 hours</span></span>
+<span><span class="co">#&gt; 2 Tropical Storm         57.48000 hours</span></span>
+<span><span class="co">#&gt; 3 Severe Tropical Storm  79.13333 hours</span></span>
+<span><span class="co">#&gt; 4 Typhoon               106.66667 hours</span></span>
+<span><span class="co">#&gt; 5 Super Typhoon          77.50000 hours</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="demonstrate-various-ggplot2-data-visualisation-geoms">Demonstrate various <code>ggplot2</code> data visualisation geoms<a class="anchor" aria-label="anchor" href="#demonstrate-various-ggplot2-data-visualisation-geoms"></a>
+</h3>
+<div class="section level4">
+<h4 id="bar-plots">Bar plots<a class="anchor" aria-label="anchor" href="#bar-plots"></a>
+</h4>
+<p><img src="reference/figures/README-barplot-1.png" style="display: block; margin: auto;"></p>
+</div>
+<div class="section level4">
+<h4 id="scatter-plots">Scatter plots<a class="anchor" aria-label="anchor" href="#scatter-plots"></a>
+</h4>
+<p><img src="reference/figures/README-scatterplot-1.png" style="display: block; margin: auto;"></p>
+</div>
+</div>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
 <p>If you find the <code>bagyo</code> package useful please cite using the suggested citation provided by a call to the <code><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation()</a></code> function as follows:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"bagyo"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; To cite bagyo in publications use:</span></span>
 <span><span class="co">#&gt; </span></span>
