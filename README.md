@@ -220,3 +220,5 @@ guidelines](https://panukatan.io/bagyo/CONTRIBUTING.html).
 This project is released with a [Contributor Code of
 Conduct](https://panukatan.io/bagyo/CODE_OF_CONDUCT.html). By
 participating in this project you agree to abide by its terms.
+
+<br> <br>

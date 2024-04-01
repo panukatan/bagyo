@@ -119,7 +119,7 @@ tropical_cyclones |>
 
 #### Bar plots
 
-```{r barplot, echo = FALSE, fig.align = "center", fig.height = 5}
+```{r barplot, echo = FALSE, fig.align = "center", fig.height = 4}
 library(ggplot2)
 
 ## Get cyclone category mean duration (in hours) ----
@@ -169,7 +169,6 @@ tropical_cyclones |>
   )
 ```
 
-
 ## Citation
 
 If you find the `bagyo` package useful please cite using the suggested citation provided by a call to the `citation()` function as follows:
@@ -183,3 +182,7 @@ citation("bagyo")
 Feedback, bug reports and feature requests are welcome; file issues or seek support [here](https://github.com/panukatan/bagyo/issues). If you would like to contribute to the package, please see our [contributing guidelines](https://panukatan.io/bagyo/CONTRIBUTING.html).
 
 This project is released with a [Contributor Code of Conduct](https://panukatan.io/bagyo/CODE_OF_CONDUCT.html). By participating in this project you agree to abide by its terms.
+
+
+<br>
+<br>
