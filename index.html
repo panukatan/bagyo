@@ -227,9 +227,7 @@
 <h4 id="tropical-cyclones-are-useful-in-learning-how-to-work-with-dates">Tropical cyclones are useful in learning how to work with dates<a class="anchor" aria-label="anchor" href="#tropical-cyclones-are-useful-in-learning-how-to-work-with-dates"></a>
 </h4>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org" class="external-link">lubridate</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Get cyclone category mean duration (in hours) ----</span></span>
+<code class="sourceCode R"><span><span class="co">## Get cyclone category mean duration (in hours) ----</span></span>
 <span><span class="va">tropical_cyclones</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>duration <span class="op">=</span> <span class="va">end</span> <span class="op">-</span> <span class="va">start</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">category_name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
