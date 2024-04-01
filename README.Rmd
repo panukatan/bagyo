@@ -108,8 +108,6 @@ tropical_cyclones |>
 #### Tropical cyclones are useful in learning how to work with dates
 
 ```{r working-with-dates}
-library(lubridate)
-
 ## Get cyclone category mean duration (in hours) ----
 tropical_cyclones |>
   mutate(duration = end - start) |>
@@ -121,7 +119,7 @@ tropical_cyclones |>
 
 #### Bar plots
 
-```{r barplot, echo = FALSE, fig.align = "center"}
+```{r barplot, echo = FALSE, fig.align = "center", fig.height = 5}
 library(ggplot2)
 
 ## Get cyclone category mean duration (in hours) ----
@@ -136,25 +134,26 @@ tropical_cyclones |>
     x = "mean duration (hours)",
     y = NULL
   ) +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    panel.grid.minor.x = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank()
+  )
 ```
 
 #### Scatter plots
 
-```{r scatterplot, echo = FALSE, fig.align = "center", fig.height = 6, fig.width = 8}
+```{r scatterplot, echo = FALSE, fig.align = "center", fig.height = 5, fig.width = 8}
 ## Cyclone speed by presssure ----
 tropical_cyclones |>
   dplyr::mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = speed, y = pressure)) +
   geom_point(
-    mapping = aes(colour = category_name, shape = factor(year)), size = 2.5) +
+    mapping = aes(colour = category_name), size = 2) +
   scale_colour_manual(
     name = "Category",
     values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72", "#5d0505")
-  ) +
-  scale_shape_manual(
-    name = "Year",
-    values = c(8, 15:18)
   ) +
   labs(
     title = "Cyclone maximum sustained wind speed by maximum central pressure",
@@ -162,7 +161,12 @@ tropical_cyclones |>
     x = "Wind speed (km/h)",
     y = "Central pressure (hPa)"
   ) +
-  theme_minimal()
+  facet_wrap(. ~ year, ncol = 4) +
+  theme_bw() +
+  theme(
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
 ```
 
 

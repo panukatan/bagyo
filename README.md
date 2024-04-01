@@ -162,8 +162,6 @@ tropical_cyclones |>
 #### Tropical cyclones are useful in learning how to work with dates
 
 ``` r
-library(lubridate)
-
 ## Get cyclone category mean duration (in hours) ----
 tropical_cyclones |>
   mutate(duration = end - start) |>
