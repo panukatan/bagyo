@@ -24,6 +24,7 @@ Suggests:
     dplyr,
     pdftools,
     spelling,
+    testthat (>= 3.0.0),
     tibble
 Encoding: UTF-8
 Language: en-GB
@@ -32,3 +33,4 @@ RoxygenNote: 7.3.1
 Roxygen: list(markdown = TRUE)
 URL: https://panukatan.io/bagyo/, https://github.com/panukatan/bagyo
 BugReports: https://github.com/panukatan/bagyo/issues
+Config/testthat/edition: 3
