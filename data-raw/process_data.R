@@ -293,7 +293,7 @@ set1_2020 <- df_2020 |>
     .fn = function(x)
       c("domestic_name", "international_name", "international_code",
         "warning_start_date", "warning_start_time", "warning_end_date",
-        "warning_end_time", "peak_pressure", "peak_speed", "peak_date",
+        "warning_end_time", "peak_speed", "peak_pressure", "peak_date",
         "peak_time")
   ) |>
   dplyr::mutate(
