@@ -6,11 +6,18 @@ output: github_document
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  fig.path = "man/figures/README-"
 )
+
+bagyo_colours <- c("#e5be72", "#4d4d4d", "#5ada3d", "#5630d3", "#e51707",
+                   "#9c5e60", "#465b92", "#4b876e", "#152127", "#5d0505")
+
+library(bagyo)
+library(tibble)
 ```
 
 # bagyo: Philippine Tropical Cyclones Data <img src="man/figures/logo.png" width="200" align="right" />
@@ -26,7 +33,33 @@ knitr::opts_chunk$set(
 
 Oceans and seas significantly impact continental weather, with evaporation from the sea surface driving cloud formation and precipitation. Tropical cyclones, warm-core low-pressure systems, form over warm oceans where temperatures exceed 26°C, precipitated by the release of latent heat from condensation. These cyclones, known by various names depending on the region, have organized circulations and develop primarily in tropical and subtropical waters, except in regions with cooler sea surface temperatures and high vertical wind shears. They reach peak intensity over warm tropical waters and weaken upon landfall, often causing extensive damage before dissipating.
 
-The Philippines frequently experiences tropical cyclones (called **bagyo** in the Filipino language) because of its geographical position. These cyclones typically bring heavy rainfall, leading to widespread flooding, as well as strong winds that cause significant damage to human life, crops, and property. Data on cyclones are collected and curated by the Philippine Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA) and made available through its website. This package contains Philippine Tropical Cyclone data in a machine-readable format. It is hoped that this data package provides an interesting and unique dataset for data exploration and visualisation.
+The Philippines frequently experiences tropical cyclones (called **bagyo** in the Filipino language) because of its geographical position. These cyclones typically bring heavy rainfall, leading to widespread flooding, as well as strong winds that cause significant damage to human life, crops, and property. Data on cyclones are collected and curated by the [Philippine Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA)](https://www.pagasa.dost.gov.ph/).
+
+This package contains Philippine Tropical Cyclone data from 2017 to 2020 in a machine-readable format. It is hoped that this data package provides an interesting and unique dataset for data exploration and visualisation.
+
+## About the `tropical_cyclones` data
+
+The `bagyo` package contains the `tropical_cyclones` dataset. This dataset was taken from annual reports on Philippine tropical cyclones prepared and released by [PAGASA](https://www.pagasa.dost.gov.ph/) at its [website](https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report) in PDF format.
+
+Because the reports are in PDF format and the information described above are in tables within the documents, scripts for scraping the desired data were developed and implemented to arrive at the `tropical_cyclones` dataset. The data scraping script can be viewed [here](https://github.com/panukatan/bagyo/blob/main/data-raw/process_data.R).
+
+The following information is available from the dataset:
+
+**Variable** | **Description** 
+:--- | :--- 
+*year* | Year 
+*category_code* | Tropical cyclone category code
+*category_name* | Tropical cyclone category name
+*name* | Name given to the tropical cyclone by Philippine authorities
+*rsmc_name* | Name given to the tropical cyclone by the Regional Specialized Meteorological Centre (RSMC)
+*start* | Date and time at which cyclone enters Philippine area of responsibility (PAR)
+*end* | Date and time at which cyclone leaves Philippine area of responsibility (PAR)
+*pressure* | Peak central pressure in *hPa*
+*speed* | Maximum sustained wind speed in *km/h*
+
+This metadata can be viewed in R through a call to `?tropical_cyclones` in the R console.
+
+Whilst tropical cyclones have ravaged the Philippines far earlier than 2017 and more currently than 2020, official and publicly available data for the information described above is only available in the reports for years 2017 to 2020. Earlier documents of this annual reporting pre-2017 have been produced but are not available on the PAGASA website. These reports of the tropical cyclone season (re-started in 2019) are published within two years after the termination of the season. Hence, the most recent report is only up to 2020.
 
 ## Installation
 
@@ -39,7 +72,99 @@ install.packages(
 )
 ```
 
+Once the `bagyo` package has been installed, the `tropical_cyclones` dataset can be loaded into R as follows:
+
+```{r load-dataset}
+library(bagyo)
+data(package = "bagyo")
+
+tropical_cyclones
+```
+
 ## Usage
+
+### Demonstrate tidy data wrangling
+
+#### Tropical cyclones are interesting to summarise
+
+```{r summary}
+library(dplyr)
+
+## Get yearly mean cyclone pressure and speed ----
+tropical_cyclones |>
+  group_by(year) |>
+  summarise(mean_pressure = mean(pressure), mean_speed = mean(speed))
+
+## Get cyclone category mean pressure and speed ----
+tropical_cyclones |>
+  group_by(category_name) |>
+  summarise(
+    n = n(),
+    mean_pressure = mean(pressure), 
+    mean_speed = mean(speed)
+  )
+```
+
+#### Tropical cyclones are useful in learning how to work with dates
+
+```{r working-with-dates}
+library(lubridate)
+
+## Get cyclone category mean duration (in hours) ----
+tropical_cyclones |>
+  mutate(duration = end - start) |>
+  group_by(category_name) |>
+  summarise(mean_duration = mean(duration))
+```
+
+### Demonstrate various `ggplot2` data visualisation geoms
+
+#### Bar plots
+
+```{r barplot, echo = FALSE, fig.align = "center"}
+library(ggplot2)
+
+## Get cyclone category mean duration (in hours) ----
+tropical_cyclones |>
+  mutate(duration = end - start) |>
+  group_by(category_name) |>
+  summarise(mean_duration = mean(duration)) |>
+  ggplot(mapping = aes(x = mean_duration, y = category_name)) +
+  geom_col(fill = "#465b92") +
+  labs(
+    title = "Mean duration of cyclones by category",
+    x = "mean duration (hours)",
+    y = NULL
+  ) +
+  theme_minimal()
+```
+
+#### Scatter plots
+
+```{r scatterplot, echo = FALSE, fig.align = "center", fig.height = 6, fig.width = 8}
+## Cyclone speed by presssure ----
+tropical_cyclones |>
+  dplyr::mutate(year = factor(year)) |>
+  ggplot(mapping = aes(x = speed, y = pressure)) +
+  geom_point(
+    mapping = aes(colour = category_name, shape = factor(year)), size = 2.5) +
+  scale_colour_manual(
+    name = "Category",
+    values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72", "#5d0505")
+  ) +
+  scale_shape_manual(
+    name = "Year",
+    values = c(8, 15:18)
+  ) +
+  labs(
+    title = "Cyclone maximum sustained wind speed by maximum central pressure",
+    subtitle = "Grouped by cyclone categories and year",
+    x = "Wind speed (km/h)",
+    y = "Central pressure (hPa)"
+  ) +
+  theme_minimal()
+```
+
 
 ## Citation
 
