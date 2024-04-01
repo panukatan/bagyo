@@ -19,7 +19,6 @@
 #' tropical_cyclones
 #'
 #' @source Data are drawn from PAGASA's Annual Report on Philippine Tropical
-#' Cyclones found at
-#' <https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report>
+#' Cyclones found at https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report
 #'
 "tropical_cyclones"

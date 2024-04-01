@@ -5,24 +5,22 @@
 \alias{tropical_cyclones}
 \title{Table of tropical cyclones that entered the Philippines from 2017 to 2020s}
 \format{
-A data frame with 9 columns and 86 rows:
-
-| **Variable** | **Description** |
-| :--- | :--- |
-| *year* | Year |
-| *category_code* | Tropical cyclone category code |
-| *category_name* | Tropical cyclone category name |
-| *name* | Name given to the tropical cyclone by Philippine authorities |
-| *rsmc_name* | Name given to the tropical cyclone by RSMC |
-| *start* | Date and time at which cyclone enters Philippine waters |
-| *end* | Date and time at which cyclone leaves Philippine waters |
-| *pressure* | Peak central pressure in *hPa* |
-| *speed* | Maximum sustained wind speed in *km/h* |
+A data frame with 9 columns and 86 rows:\tabular{ll}{
+   \strong{Variable} \tab \strong{Description} \cr
+   \emph{year} \tab Year \cr
+   \emph{category_code} \tab Tropical cyclone category code \cr
+   \emph{category_name} \tab Tropical cyclone category name \cr
+   \emph{name} \tab Name given to the tropical cyclone by Philippine authorities \cr
+   \emph{rsmc_name} \tab Name given to the tropical cyclone by RSMC \cr
+   \emph{start} \tab Date and time at which cyclone enters Philippine waters \cr
+   \emph{end} \tab Date and time at which cyclone leaves Philippine waters \cr
+   \emph{pressure} \tab Peak central pressure in \emph{hPa} \cr
+   \emph{speed} \tab Maximum sustained wind speed in \emph{km/h} \cr
+}
 }
 \source{
 Data are drawn from PAGASA's Annual Report on Philippine Tropical
-Cyclones found at
-<https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report>
+Cyclones found at https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report
 }
 \usage{
 tropical_cyclones
