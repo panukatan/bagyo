@@ -17,6 +17,17 @@ Description: The Philippines frequently experiences tropical cyclones (called
     Tropical Cyclone data in a machine-readable format. It is hoped that this
     data package provides an interesting and unique dataset for data exploration 
     and visualisation.
-License: GPL (>= 3)
+License: CC0
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    dplyr,
+    pdftools,
+    spelling,
+    tibble
 Encoding: UTF-8
+Language: en-GB
 LazyData: true
+RoxygenNote: 7.3.1
+URL: https://panukatan.io/bagyo/, https://github.com/panukatan/bagyo
+BugReports: https://github.com/panukatan/bagyo/issues

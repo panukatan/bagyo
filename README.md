@@ -10,16 +10,19 @@ has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/panukatan/bagyo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/panukatan/bagyo/branch/main/graph/badge.svg)](https://app.codecov.io/gh/panukatan/bagyo?branch=main)
 <!-- badges: end -->
 
 Oceans and seas significantly impact continental weather, with
 evaporation from the sea surface driving cloud formation and
 precipitation. Tropical cyclones, warm-core low-pressure systems, form
-over warm oceans where temperatures exceed 26°C, fueled by the release
-of latent heat from condensation. These cyclones, known by various names
-depending on the region, have organized circulations and develop
-primarily in tropical and subtropical waters, except in regions with
-cooler sea surface temperatures and high vertical wind shears. They
+over warm oceans where temperatures exceed 26°C, precipitated by the
+release of latent heat from condensation. These cyclones, known by
+various names depending on the region, have organized circulations and
+develop primarily in tropical and subtropical waters, except in regions
+with cooler sea surface temperatures and high vertical wind shears. They
 reach peak intensity over warm tropical waters and weaken upon landfall,
 often causing extensive damage before dissipating.
 
