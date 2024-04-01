@@ -37,8 +37,6 @@ This package contains Philippine Tropical Cyclone data from 2017 to 2020 in a ma
 
 The `bagyo` package contains the `tropical_cyclones` dataset. This dataset was taken from annual reports on Philippine tropical cyclones prepared and released by [PAGASA](https://www.pagasa.dost.gov.ph/) at its [website](https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report).
 
-
-
 ## Installation
 
 `bagyo` is not yet on CRAN but can be installed from the [panukatan R universe](https://panukatan.r-universe.dev) as follows:

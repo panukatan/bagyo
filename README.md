@@ -33,11 +33,22 @@ The Philippines frequently experiences tropical cyclones (called
 position. These cyclones typically bring heavy rainfall, leading to
 widespread flooding, as well as strong winds that cause significant
 damage to human life, crops, and property. Data on cyclones are
-collected and curated by the Philippine Atmospheric, Geophysical, and
-Astronomical Services Administration (PAGASA) and made available through
-its website. This package contains Philippine Tropical Cyclone data in a
-machine-readable format. It is hoped that this data package provides an
-interesting and unique dataset for data exploration and visualisation.
+collected and curated by the [Philippine Atmospheric, Geophysical, and
+Astronomical Services Administration
+(PAGASA)](https://www.pagasa.dost.gov.ph/).
+
+This package contains Philippine Tropical Cyclone data from 2017 to 2020
+in a machine-readable format. It is hoped that this data package
+provides an interesting and unique dataset for data exploration and
+visualisation.
+
+## About the `tropical_cyclones` data
+
+The `bagyo` package contains the `tropical_cyclones` dataset. This
+dataset was taken from annual reports on Philippine tropical cyclones
+prepared and released by [PAGASA](https://www.pagasa.dost.gov.ph/) at
+its
+[website](https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report).
 
 ## Installation
 
