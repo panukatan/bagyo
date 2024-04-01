@@ -1,0 +1,49 @@
+title: bagyo
+
+url: https://panukatan.io/bagyo/
+
+template:
+  bootstrap: 5
+  bootswatch: cosmo
+  theme: haddock
+  ganalytics: #
+
+home:
+  links:
+  - text: Read more about Philippine Tropical Cyclones
+    href: https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report
+
+navbar:
+  bg: info
+  type: light
+  structure:
+    left:  [home, intro, reference, articles, news]
+    #right: [twitter, facebook, linkedin, github]
+
+  components:
+    # articles:
+    #   text: Articles
+    #   menu:
+    #   - text: "ICD-11 Foundation"
+    #     href: articles/icd11_foundation.html
+    # twitter:
+    #   icon: "fab fa-twitter fa-lg"
+    #   href: http://twitter.com/OxIHTM
+    # facebook:
+    #   icon: "fab fa-facebook fa-lg"
+    #   href: https://www.facebook.com/MSc-in-International-Health-and-Tropical-Medicine-University-of-Oxford-433056700228246/
+    # linkedin:
+    #   icon: "fab fa-linkedin fa-lg"
+    #   href: https://www.linkedin.com/company/international-health-and-tropical-medicine
+
+
+reference:
+  - title: Description
+    contents:
+    - bagyo
+
+  - title: Datasets
+    contents:
+    - tropical_cyclones
+
+
