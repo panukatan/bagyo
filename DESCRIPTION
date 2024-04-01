@@ -22,7 +22,9 @@ Depends:
     R (>= 2.10)
 Suggests: 
     dplyr,
+    knitr,
     pdftools,
+    rmarkdown,
     spelling,
     testthat (>= 3.0.0),
     tibble
@@ -34,3 +36,4 @@ Roxygen: list(markdown = TRUE)
 URL: https://panukatan.io/bagyo/, https://github.com/panukatan/bagyo
 BugReports: https://github.com/panukatan/bagyo/issues
 Config/testthat/edition: 3
+VignetteBuilder: knitr
