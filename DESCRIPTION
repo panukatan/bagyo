@@ -22,12 +22,15 @@ Depends:
     R (>= 2.10)
 Suggests: 
     dplyr,
+    ggplot2,
     knitr,
+    lubridate,
     pdftools,
     rmarkdown,
     spelling,
     testthat (>= 3.0.0),
-    tibble
+    tibble,
+    tidyr
 Encoding: UTF-8
 Language: en-GB
 LazyData: true

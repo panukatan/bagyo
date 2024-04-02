@@ -10,7 +10,8 @@
 #' and made available through its website. This package contains Philippine
 #' Tropical Cyclone data in a machine-readable format. It is hoped that this
 #' data package provides an interesting and unique dataset for data exploration
-#' and visualisation.
+#' and visualisation as an adjunct to the traditional `iris` dataset and to the
+#' current `palmerpenguins` dataset.
 #'
 #' @docType package
 #' @keywords internal

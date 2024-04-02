@@ -15,7 +15,8 @@ Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA)
 and made available through its website. This package contains Philippine
 Tropical Cyclone data in a machine-readable format. It is hoped that this
 data package provides an interesting and unique dataset for data exploration
-and visualisation.
+and visualisation as an adjunct to the traditional \code{iris} dataset and to the
+current \code{palmerpenguins} dataset.
 }
 \seealso{
 Useful links:
