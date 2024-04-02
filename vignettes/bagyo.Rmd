@@ -158,7 +158,7 @@ cyclones |>
   )
 ```
 
-## Time series
+### Time series
 
 ```{r time-series, fig.align = "center", fig.height = 4, fig.width = 8}
 ## Get number of cyclones per month by year and plot ----
@@ -189,4 +189,54 @@ cyclones |>
     panel.grid.major.x = element_blank(),
     axis.text.x = element_text(size = 10, angle = 90, hjust = 1, vjust = 0.5)
   )
+```
+
+### Distribution plots
+
+```{r boxplot, fig.align = "center"}
+cyclones |>
+  mutate(year = factor(year)) |>
+  ggplot(mapping = aes(x = year, y = speed)) +
+  geom_boxplot(colour = "#4b876e", fill = alpha("#4b876e", 0.5)) +
+  labs(
+    title = "Distribution of tropical cyclone maximum sustained wind speed",
+    subtitle = "2017-2022",
+    x = NULL, y = "speed (km/h)"
+  ) +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank())
+```
+
+
+```{r boxplot-jitter, fig.align = "center"}
+cyclones |>
+  mutate(year = factor(year)) |>
+  ggplot(mapping = aes(x = year, y = speed)) +
+  geom_boxplot(colour = "#4b876e") +
+  geom_jitter(
+    colour = "#4b876e", fill = alpha("#4b876e", 0.5),
+    shape = 21, size = 2, width = 0.2
+  ) +
+  labs(
+    title = "Distribution of tropical cyclone maximum sustained wind speed",
+    subtitle = "2017-2022",
+    x = NULL, y = "speed (km/h)"
+  ) +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank())
+```
+
+```{r violin-jitter, fig.align = "center"}
+cyclones |>
+  mutate(year = factor(year)) |>
+  ggplot(mapping = aes(x = year, y = speed)) +
+  geom_violin(colour = "#4b876e", fill = alpha("#4b876e", 0.5)) +
+  geom_jitter(fill = "#4b876e", size = 2, width = 0.2) +
+  labs(
+    title = "Distribution of tropical cyclone maximum sustained wind speed",
+    subtitle = "2017-2022",
+    x = NULL, y = "speed (km/h)"
+  ) +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank())
 ```
