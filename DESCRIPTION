@@ -22,10 +22,15 @@ Depends:
     R (>= 2.10)
 Suggests: 
     dplyr,
+    ggplot2,
+    knitr,
+    lubridate,
     pdftools,
+    rmarkdown,
     spelling,
     testthat (>= 3.0.0),
-    tibble
+    tibble,
+    tidyr
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
@@ -34,3 +39,4 @@ Roxygen: list(markdown = TRUE)
 URL: https://panukatan.io/bagyo/, https://github.com/panukatan/bagyo
 BugReports: https://github.com/panukatan/bagyo/issues
 Config/testthat/edition: 3
+VignetteBuilder: knitr

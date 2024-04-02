@@ -12,13 +12,14 @@
 #' | *rsmc_name* | Name given to the tropical cyclone by RSMC |
 #' | *start* | Date and time at which cyclone enters Philippine waters |
 #' | *end* | Date and time at which cyclone leaves Philippine waters |
-#' | *pressure* | Peak central pressure in *hPa* |
+#' | *pressure* | Maximum central pressure in *hPa* |
 #' | *speed* | Maximum sustained wind speed in *km/h* |
 #'
 #' @examples
-#' tropical_cyclones
+#' cyclones
 #'
 #' @source Data are drawn from PAGASA's Annual Report on Philippine Tropical
-#' Cyclones found at https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report
+#' Cyclones found at
+#' https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report
 #'
-"tropical_cyclones"
+"cyclones"
