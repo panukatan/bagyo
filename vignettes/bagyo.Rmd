@@ -231,7 +231,7 @@ cyclones |>
   mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = year, y = speed)) +
   geom_violin(colour = "#4b876e", fill = alpha("#4b876e", 0.5)) +
-  geom_jitter(fill = "#4b876e", size = 2, width = 0.2) +
+  geom_jitter(colour = "#4b876e", size = 2, width = 0.2) +
   labs(
     title = "Distribution of tropical cyclone maximum sustained wind speed",
     subtitle = "2017-2022",
