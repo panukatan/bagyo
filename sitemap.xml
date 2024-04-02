@@ -13,6 +13,12 @@
     <loc>https://panukatan.io/bagyo/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://panukatan.io/bagyo/articles/bagyo.html</loc>
+  </url>
+  <url>
+    <loc>https://panukatan.io/bagyo/articles/index.html</loc>
+  </url>
+  <url>
     <loc>https://panukatan.io/bagyo/authors.html</loc>
   </url>
   <url>
@@ -22,9 +28,9 @@
     <loc>https://panukatan.io/bagyo/reference/bagyo.html</loc>
   </url>
   <url>
-    <loc>https://panukatan.io/bagyo/reference/index.html</loc>
+    <loc>https://panukatan.io/bagyo/reference/cyclones.html</loc>
   </url>
   <url>
-    <loc>https://panukatan.io/bagyo/reference/tropical_cyclones.html</loc>
+    <loc>https://panukatan.io/bagyo/reference/index.html</loc>
   </url>
 </urlset>
