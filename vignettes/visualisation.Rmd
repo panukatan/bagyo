@@ -92,7 +92,7 @@ cyclones |>
   group_by(category_name) |>
   summarise(mean_duration = mean(duration)) |>
   ggplot(mapping = aes(x = mean_duration, y = category_name)) +
-  geom_col(fill = "#4b876e", alpha = 0.5) +
+  geom_col(colour = "#4b876e", fill = "#4b876e", alpha = 0.5) +
   labs(
     title = "Mean duration of cyclones",
     subtitle = "By cyclone categories",
@@ -176,7 +176,7 @@ cyclones |>
   complete(month, year, fill = list(n = 0)) |>
   arrange(year, month) |>
   ggplot(mapping = aes(x = month, y = n)) +
-  geom_col(fill = "#4b876e", alpha = 0.5) +
+  geom_col(colour = "#4b876e", fill = "#4b876e", alpha = 0.5) +
   scale_y_continuous(breaks = seq(from = 0, to = 6, by = 1)) +
   labs(
     title = "Number of cyclones over time",
