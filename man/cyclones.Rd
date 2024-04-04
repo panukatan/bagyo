@@ -3,7 +3,7 @@
 \docType{data}
 \name{cyclones}
 \alias{cyclones}
-\title{Table of tropical cyclones that entered the Philippines from 2017 to 2020s}
+\title{Table of tropical cyclones that entered the Philippines from 2017 to 2020}
 \format{
 A data frame with 9 columns and 86 rows:\tabular{ll}{
    \strong{Variable} \tab \strong{Description} \cr
@@ -27,7 +27,7 @@ https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report
 cyclones
 }
 \description{
-Table of tropical cyclones that entered the Philippines from 2017 to 2020s
+Table of tropical cyclones that entered the Philippines from 2017 to 2020
 }
 \examples{
 cyclones
