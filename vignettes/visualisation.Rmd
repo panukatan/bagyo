@@ -85,7 +85,7 @@ Following are some examples of how the `cyclones` dataset can be used to demonst
 
 ### Bar plots
 
-```{r barplot, echo = FALSE, fig.align = "center", fig.height = 4}
+```{r barplot, fig.align = "center", fig.height = 4}
 ## Get cyclone category mean duration (in hours) ----
 cyclones |>
   mutate(duration = end - start) |>
@@ -109,7 +109,7 @@ cyclones |>
 
 ### Scatter plots
 
-```{r scatterplot, echo = FALSE, fig.align = "center", fig.height = 5, fig.width = 8}
+```{r scatterplot1, fig.align = "center", fig.height = 5, fig.width = 8}
 ## Cyclone speed by presssure ----
 cyclones |>
   dplyr::mutate(year = factor(year)) |>
@@ -135,6 +135,28 @@ cyclones |>
     panel.border = element_rect(colour = "#465b92"),
     panel.grid.minor = element_blank()
   )
+```
+
+```{r scatterplot2, fig.align = "center"}
+cyclones |>
+  mutate(
+    year = factor(year),
+    duration = as.numeric(end - start)
+  ) |>
+  ggplot(mapping = aes(x = speed, y = duration)) +
+  geom_point(mapping = aes(colour = year, shape = year), size = 3) +
+  geom_smooth(mapping = aes(colour = year), method = "lm", se = FALSE) +
+  scale_colour_manual(
+    values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72")
+  ) +
+  scale_shape_manual(values = 15:18) +
+  labs(
+    title = "Maximum sustained wind speed by duration of cyclones",
+    subtitle = "2017-2020",
+    x = "speed (km/h)", y = "duration (hours)",
+    colour = "Year", shape = "Year"
+  ) +
+  theme_minimal()
 ```
 
 ### Time series
@@ -220,28 +242,3 @@ cyclones |>
   theme(panel.grid.major.x = element_blank())
 ```
 
-
-```{r scatterplot2, fig.align = "center"}
-cyclones |>
-  mutate(
-    year = factor(year),
-    duration = as.numeric(end - start)
-  ) |>
-  ggplot(mapping = aes(x = speed, y = duration)) +
-  #geom_point(colour = "#4b876e", size = 3) +
-  geom_point(mapping = aes(colour = year, shape = year), size = 3) +
-  #geom_smooth(fill = "#465b92", colour = "#465b92") +
-  geom_smooth(mapping = aes(colour = year), method = "lm", se = FALSE) +
-  scale_colour_manual(
-    values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72")
-  ) +
-  scale_shape_manual(values = 15:18) +
-  labs(
-    title = "Maximum sustained wind speed by duration of cyclones",
-    subtitle = "2017-2020",
-    x = "speed (km/h)", y = "duration (hours)",
-    colour = "Year", shape = "Year"
-  ) +
-  #facet_wrap(. ~ year, ncol = 4) +
-  theme_minimal()
-```
