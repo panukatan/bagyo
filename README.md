@@ -22,19 +22,19 @@ evaporation from the sea surface driving cloud formation and
 precipitation. Tropical cyclones, warm-core low-pressure systems, form
 over warm oceans where temperatures exceed 26°C, precipitated by the
 release of latent heat from condensation. These cyclones, known by
-various names depending on the region, have organized circulations and
+various names depending on the region, have organised circulations and
 develop primarily in tropical and subtropical waters, except in regions
 with cooler sea surface temperatures and high vertical wind shears. They
 reach peak intensity over warm tropical waters and weaken upon landfall,
 often causing extensive damage before dissipating.
 
 The Philippines frequently experiences tropical cyclones (called
-**bagyo** in the Filipino language) because of its geographical
-position. These cyclones typically bring heavy rainfall, leading to
-widespread flooding, as well as strong winds that cause significant
-damage to human life, crops, and property. Data on cyclones are
-collected and curated by the [Philippine Atmospheric, Geophysical, and
-Astronomical Services Administration
+***bagyo*** - pronounced /baɡˈjo/, \[bɐɡˈjo\] - in the Filipino
+language) because of its geographical position. These cyclones typically
+bring heavy rainfall, leading to widespread flooding, as well as strong
+winds that cause significant damage to human life, crops, and property.
+Data on cyclones are collected and curated by the [Philippine
+Atmospheric, Geophysical, and Astronomical Services Administration
 (PAGASA)](https://www.pagasa.dost.gov.ph/).
 
 This package contains Philippine tropical cyclone data from 2017 to 2020
@@ -45,32 +45,6 @@ visualisation as an adjunct to the traditional
 dataset and to the current
 [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/)
 dataset.
-
-## About the `cyclones` data
-
-The `bagyo` package contains the `cyclones` dataset. This dataset was
-taken from annual reports on Philippine tropical cyclones prepared and
-released by [PAGASA](https://www.pagasa.dost.gov.ph/) at its
-[website](https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report)
-in PDF format.
-
-Because the reports are in PDF format and the information described
-above are in tables within the documents, scripts for scraping the
-desired data were developed and implemented to arrive at the `cyclones`
-dataset. The data scraping script can be viewed
-[here](https://github.com/panukatan/bagyo/blob/main/data-raw/process_data.R).
-The `cyclones` metadata can be viewed in R through a call to `?cyclones`
-in the R console.
-
-Whilst tropical cyclones have affected the Philippines far earlier than
-2017 and more currently than 2020, official and publicly available data
-for the information described above is only available in the reports for
-years 2017 to 2020. Earlier documents of this annual reporting pre-2017
-have been produced but are not available on the
-[PAGASA](https://www.pagasa.dost.gov.ph/) website. These reports of the
-tropical cyclone season (re-started in 2019) are published within two
-years after the termination of the season. Hence, the most recent report
-is only up to 2020 for now.
 
 ## Installation
 

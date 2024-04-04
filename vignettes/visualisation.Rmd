@@ -92,7 +92,7 @@ cyclones |>
   group_by(category_name) |>
   summarise(mean_duration = mean(duration)) |>
   ggplot(mapping = aes(x = mean_duration, y = category_name)) +
-  geom_col(fill = alpha("#4b876e", 0.7)) +
+  geom_col(fill = "#4b876e", alpha = 0.5) +
   labs(
     title = "Mean duration of cyclones",
     subtitle = "By cyclone categories",
@@ -149,7 +149,7 @@ cyclones |>
   complete(month, year, fill = list(n = 0)) |>
   arrange(year, month) |>
   ggplot(mapping = aes(x = month, y = n)) +
-  geom_col(fill = alpha("#4b876e", 0.7)) +
+  geom_col(fill = "#4b876e", alpha = 0.5) +
   scale_y_continuous(breaks = seq(from = 0, to = 6, by = 1)) +
   labs(
     title = "Number of cyclones over time",
@@ -176,7 +176,7 @@ cyclones |>
 cyclones |>
   mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = year, y = speed)) +
-  geom_boxplot(colour = "#4b876e", fill = alpha("#4b876e", 0.5)) +
+  geom_boxplot(colour = "#4b876e", fill = "#4b876e", alpha = 0.5) +
   labs(
     title = "Distribution of tropical cyclone maximum sustained wind speed",
     subtitle = "2017-2022",
@@ -193,7 +193,7 @@ cyclones |>
   ggplot(mapping = aes(x = year, y = speed)) +
   geom_boxplot(colour = "#4b876e") +
   geom_jitter(
-    colour = "#4b876e", fill = alpha("#4b876e", 0.5),
+    colour = "#4b876e", fill = "#4b876e", alpha = 0.5,
     shape = 21, size = 2, width = 0.2
   ) +
   labs(
@@ -209,8 +209,8 @@ cyclones |>
 cyclones |>
   mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = year, y = speed)) +
-  geom_violin(colour = "#4b876e", fill = alpha("#4b876e", 0.5)) +
-  geom_jitter(fill = "#4b876e", size = 2, width = 0.2) +
+  geom_violin(colour = "#4b876e", fill = "#4b876e", alpha = 0.5) +
+  geom_jitter(colour = "#4b876e", size = 3, width = 0.2) +
   labs(
     title = "Distribution of tropical cyclone maximum sustained wind speed",
     subtitle = "2017-2022",
