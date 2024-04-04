@@ -21,11 +21,14 @@ navbar:
     #right: [twitter, facebook, linkedin, github]
 
   components:
-    # articles:
-    #   text: Articles
-    #   menu:
-    #   - text: "ICD-11 Foundation"
-    #     href: articles/icd11_foundation.html
+    intro:
+      text: "Why bagyo?"
+      href: "articles/bagyo.html"
+    articles:
+      text: Articles
+      menu:
+      - text: "Data Wrangling and Visualisation"
+        href: articles/visualisation.html
     # twitter:
     #   icon: "fab fa-twitter fa-lg"
     #   href: http://twitter.com/OxIHTM
