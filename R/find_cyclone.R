@@ -38,31 +38,31 @@ get_bagyo <- function() {
 #'
 
 print.bagyo <- function(x, ...) {
-  cat("\n\tFeatured Bagyo\n\n", sep = "")
+  cat("\n\t*** Featured Bagyo ***\n\n", sep = "")
   cat(
-    "Name:", format(x$name, width = 10, justify = "left"),
+    "Name:", format(x$name, width = 20, justify = "left"),
     "RSMC Name:", format(x$rsmc_name, width = 0, justify = "left"),
-    "\n\n"
+    "\n"
   )
   cat(
-    "Year:", format(as.character(x$year), width = 5, justify = "left"),
-    "Category Code:", format(x$category_code, width = 5, justify = "left"),
-    "Category Name: ", format(x$category_name, width = 5, justify = "left"),
-    "\n\n"
+    "Year:", format(as.character(x$year), width = 20, justify = "left"),
+    "Category:", format(
+      paste0(x$category_name, " (", x$category_code, ")"),
+      width = 0, justify = "left"),
+    "\n"
   )
   cat(
-    "Start:", format(x$start, justify = "left"),
-    "     ",
-    "End:", format(x$end, justify = "left"),
-    "\n\n"
+    "Start:", format(x$start, format = "%Y-%m-%d %H:%M:%S", justify = "left"),
+    "End:", format(x$end, format = "%Y-%m-%d %H:%M:%S", justify = "left"),
+    "\n"
   )
   cat(
     "Pressure:",
     format(as.character(x$pressure), justify = "left", width = 1),
     "hPa",
-    "     ",
+    "        ",
     "Speed:", format(as.character(x$speed), justify = "left", width = 1),
     "km/h",
-    "\n\n"
+    "\n"
   )
 }
