@@ -10,7 +10,7 @@ template:
 
 home:
   links:
-  - text: Read more about Philippine Tropical Cyclones
+  - text: Read more about Philippine tropical cyclones
     href: https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report
 
 navbar:
@@ -49,4 +49,7 @@ reference:
     contents:
     - cyclones
 
-
+  - title: Utilities
+    contents:
+    - get_bagyo
+    - print.bagyo
