@@ -37,8 +37,8 @@ Data on cyclones are collected and curated by the [Philippine
 Atmospheric, Geophysical, and Astronomical Services Administration
 (PAGASA)](https://www.pagasa.dost.gov.ph/).
 
-This package contains Philippine tropical cyclone data from 2017 to 2020
-in a machine-readable format. It is hoped that this data package
+This package contains Philippine tropical cyclones data from 2017 to
+2020 in a machine-readable format. It is hoped that this data package
 provides an interesting and unique dataset for data exploration and
 visualisation as an adjunct to the traditional
 [`iris`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html)
@@ -126,7 +126,7 @@ bagyo |>
 #> 5 Super Typhoon          77.50000 hours
 ```
 
-### `bagyo` are great to visualise
+### `bagyo` is great to visualise
 
 <img src="man/figures/README-barplot-1.png" style="display: block; margin: auto;" />
 
