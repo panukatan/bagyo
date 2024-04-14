@@ -26,11 +26,11 @@ current palmerpenguins dataset."><meta property="og:image" content="https://panu
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-info"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-info" data-bs-theme="light"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">bagyo</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Unreleased version">0.0.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +67,7 @@ current palmerpenguins dataset."><meta property="og:image" content="https://panu
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Philippine Tropical Cyclones Data</h1>
-      <small class="dont-index">Source: <a href="https://github.com/panukatan/bagyo/blob/HEAD/R/bagyo.R" class="external-link"><code>R/bagyo.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/panukatan/bagyo/blob/HEAD/R/bagyo-package.R" class="external-link"><code>R/bagyo-package.R</code></a>, <a href="https://github.com/panukatan/bagyo/blob/HEAD/R/bagyo.R" class="external-link"><code>R/bagyo.R</code></a></small>
       <div class="d-none name"><code>bagyo.Rd</code></div>
     </div>
 
@@ -85,7 +85,20 @@ and visualisation as an adjunct to the traditional <code>iris</code> dataset and
 current <code>palmerpenguins</code> dataset.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">bagyo</span></span></code></pre></div>
+    </div>
 
+    <div class="section level2">
+    <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
+    <p>A data frame with 9 columns and 86 rows:</p><table class="table table"><tr><td><strong>Variable</strong></td><td><strong>Description</strong></td></tr><tr><td><em>year</em></td><td>Year</td></tr><tr><td><em>category_code</em></td><td>Tropical cyclone category code</td></tr><tr><td><em>category_name</em></td><td>Tropical cyclone category name</td></tr><tr><td><em>name</em></td><td>Name given to the tropical cyclone by Philippine authorities</td></tr><tr><td><em>rsmc_name</em></td><td>Name given to the tropical cyclone by RSMC</td></tr><tr><td><em>start</em></td><td>Date and time at which cyclone enters Philippine waters</td></tr><tr><td><em>end</em></td><td>Date and time at which cyclone leaves Philippine waters</td></tr><tr><td><em>pressure</em></td><td>Maximum central pressure in <em>hPa</em></td></tr><tr><td><em>speed</em></td><td>Maximum sustained wind speed in <em>km/h</em></td></tr></table></div>
+    <div class="section level2">
+    <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
+    <p>Data are drawn from PAGASA's Annual Report on Philippine Tropical
+Cyclones found at
+https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report</p>
+    </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Useful links:</p><ul><li><p><a href="https://panukatan.io/bagyo/">https://panukatan.io/bagyo/</a></p></li>
@@ -98,6 +111,27 @@ current <code>palmerpenguins</code> dataset.</p>
     <p><strong>Maintainer</strong>: Ernest Guevarra <a href="mailto:ernest@guevarra.io">ernest@guevarra.io</a> (<a href="https://orcid.org/0000-0002-4887-4415" class="external-link">ORCID</a>)</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">bagyo</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 86 × 9</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     year category_code category_name         name  rsmc_name start              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>  <span style="text-decoration: underline;">2</span>017 TD            Tropical Depression   Auri… <span style="color: #BB0000;">NA</span>        2017-01-07 <span style="color: #949494;">08:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>  <span style="text-decoration: underline;">2</span>017 TD            Tropical Depression   Bisi… <span style="color: #BB0000;">NA</span>        2017-02-03 <span style="color: #949494;">14:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>  <span style="text-decoration: underline;">2</span>017 TD            Tropical Depression   Cris… <span style="color: #BB0000;">NA</span>        2017-04-14 <span style="color: #949494;">14:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>  <span style="text-decoration: underline;">2</span>017 TS            Tropical Storm        Dante Muifa     2017-04-26 <span style="color: #949494;">08:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  <span style="text-decoration: underline;">2</span>017 STS           Severe Tropical Storm Emong Nanmadol  2017-07-02 <span style="color: #949494;">02:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  <span style="text-decoration: underline;">2</span>017 TD            Tropical Depression   Fabi… Roke      2017-07-22 <span style="color: #949494;">02:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  <span style="text-decoration: underline;">2</span>017 TY            Typhoon               Gorio Nesat     2017-07-25 <span style="color: #949494;">14:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  <span style="text-decoration: underline;">2</span>017 TS            Tropical Storm        Huan… Haitang   2017-07-30 <span style="color: #949494;">02:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  <span style="text-decoration: underline;">2</span>017 STS           Severe Tropical Storm Isang Hato      2017-08-20 <span style="color: #949494;">08:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>  <span style="text-decoration: underline;">2</span>017 TS            Tropical Storm        Joli… Pakhar    2017-08-24 <span style="color: #949494;">14:00:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 76 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 3 more variables: end &lt;dttm&gt;, pressure &lt;int&gt;, speed &lt;int&gt;</span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 
@@ -107,7 +141,7 @@ current <code>palmerpenguins</code> dataset.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.8.</p>
 </div>
 
     </footer></div>
