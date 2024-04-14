@@ -50,3 +50,4 @@ reference:
     contents:
     - get_bagyo
     - print.bagyo
+    - find_bagyo
