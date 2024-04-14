@@ -27,11 +27,11 @@ Now, having lived almost half of my lifetime outside of the Philippines, I have 
 
 It is from this background that this R package was borne out of. Just like a songwriter's lyrics and melody for a loved one or a poet's ode to their muse, this package is a nod to my youth and a loving embrace to my motherland. I've always thought of how good it would be to have a dataset that I, and others like me, will be able to relate to. I hope this dataset can be an adjunct to the well-established [`iris`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html) dataset and to the currently popular [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/) dataset.
 
-## About the `cyclones` data
+## About the `bagyo` data
 
-The `bagyo` package contains the `cyclones` dataset. This dataset was taken from annual reports on Philippine tropical cyclones prepared and released by [PAGASA](https://www.pagasa.dost.gov.ph/) at its [website](https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report) in PDF format.
+The `bagyo` package contains the `bagyo` dataset. This dataset was taken from annual reports on Philippine tropical cyclones prepared and released by [PAGASA](https://www.pagasa.dost.gov.ph/) at its [website](https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report) in PDF format.
 
-Because the reports are in PDF format and the information described above are in tables within the documents, scripts for scraping the desired data were developed and implemented to arrive at the `cyclones` dataset. The data scraping script can be viewed [here](https://github.com/panukatan/bagyo/blob/main/data-raw/process_data.R).
+Because the reports are in PDF format and the information described above are in tables within the documents, scripts for scraping the desired data were developed and implemented to arrive at the `bagyo` dataset. The data scraping script can be viewed [here](https://github.com/panukatan/bagyo/blob/main/data-raw/process_data.R).
 
 The following information is available from the dataset:
 
@@ -47,11 +47,11 @@ The following information is available from the dataset:
 *pressure* | Maximum central pressure in *hPa*
 *speed* | Maximum sustained wind speed in *km/h*
 
-This metadata can be viewed in R through a call to `?cyclones` in the R console.
+This metadata can be viewed in R through a call to `?bagyo` in the R console.
 
 Whilst tropical cyclones have affected the Philippines far earlier than 2017 and more currently than 2020, official and publicly available data for the information described above is only available in the reports for years 2017 to 2020. Earlier documents of this annual reporting pre-2017 have been produced but are not available on the [PAGASA](https://www.pagasa.dost.gov.ph/) website. These reports of the tropical cyclone season (re-started in 2019) are published within two years after the termination of the season. Hence, the most recent report is only up to 2020 for now.
 
-It is expected that reports for 2021 onwards will continue to be published and made available by PAGASA. As such, the `bagyo` package and the `cyclones` dataset within it will be updated accordingly. Continued efforts are also being taken to find sources of information for years preceding 2017.
+It is expected that reports for 2021 onwards will continue to be published and made available by PAGASA. As such, the `bagyo` package and the `bagyo` dataset within it will be updated accordingly. Continued efforts are also being taken to find sources of information for years preceding 2017.
 
 <br>
 <br>

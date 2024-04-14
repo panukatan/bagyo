@@ -58,14 +58,14 @@ install.packages(
 )
 ```
 
-Once the `bagyo` package has been installed, the `cyclones` dataset can
-be loaded into R as follows:
+Once the `bagyo` package has been installed, the `bagyo` dataset can be
+loaded into R as follows:
 
 ``` r
 library(bagyo)
 data(package = "bagyo")
 
-cyclones
+bagyo
 #> # A tibble: 86 × 9
 #>     year category_code category_name         name  rsmc_name start              
 #>    <dbl> <fct>         <fct>                 <chr> <chr>     <dttm>             
@@ -85,13 +85,13 @@ cyclones
 
 ## Usage
 
-### `cyclones` are interesting to summarise
+### `bagyo` is interesting to summarise
 
 ``` r
 library(dplyr)
 
 ## Get cyclone category mean pressure and speed ----
-cyclones |>
+bagyo |>
   group_by(category_name) |>
   summarise(
     n = n(),
@@ -108,11 +108,11 @@ cyclones |>
 #> 5 Super Typhoon             2          908.      112.
 ```
 
-### `cyclones` are useful in learning how to work with dates
+### `bagyo` is useful in learning how to work with dates
 
 ``` r
 ## Get cyclone category mean duration (in hours) ----
-cyclones |>
+bagyo |>
   mutate(duration = end - start) |>
   group_by(category_name) |>
   summarise(mean_duration = mean(duration))
@@ -126,7 +126,7 @@ cyclones |>
 #> 5 Super Typhoon          77.50000 hours
 ```
 
-### `cyclones` are great to visualise
+### `bagyo` are great to visualise
 
 <img src="man/figures/README-barplot-1.png" style="display: block; margin: auto;" />
 
@@ -141,8 +141,8 @@ citation provided by a call to the `citation()` function as follows:
 citation("bagyo")
 #> To cite bagyo in publications use:
 #> 
-#>   Ernest Guevarra (2024). bagyo: Philippine Tropical Cyclones Data R
-#>   package version 0.0.0.9000 URL https://panukatan.io/bagyo/
+#>   Ernest Guevarra (2024). _bagyo: Philippine Tropical Cyclones Data_. R
+#>   package version 0.0.0.9000, <https://panukatan.io/bagyo/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 

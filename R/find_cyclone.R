@@ -15,7 +15,7 @@
 #'
 
 get_bagyo <- function() {
-  df <- bagyo::cyclones
+  df <- bagyo::bagyo
 
   df <- df[sample(seq_len(nrow(df)), size = 1), ] |>
     as.list()

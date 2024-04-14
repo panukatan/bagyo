@@ -1,19 +1,19 @@
 # Tests for data ---------------------------------------------------------------
 
 test_that(
-  "cyclones is a data.frame",
+  "bagyo is a data.frame",
   {
-    expect_s3_class(cyclones, "data.frame")
-    expect_s3_class(cyclones, "tbl")
+    expect_s3_class(bagyo, "data.frame")
+    expect_s3_class(bagyo, "tbl")
   }
 )
 
 
 test_that(
-  "cyclones has specific names",
+  "bagyo has specific names",
   {
     expect_named(
-      cyclones,
+      bagyo,
       expected = c(
         "year", "category_code", "category_name", "name", "rsmc_name",
         "start", "end", "pressure", "speed"
@@ -23,17 +23,17 @@ test_that(
 )
 
 test_that(
-  "cyclones has specific years",
+  "bagyo has specific values",
   {
-    expect_contains(cyclones$year, 2017:2020)
+    expect_contains(bagyo$year, 2017:2020)
     expect_contains(
-      cyclones$category_name,
+      bagyo$category_name,
       c(
         "Tropical Depression", "Tropical Storm", "Severe Tropical Storm",
         "Typhoon", "Super Typhoon"
       )
     )
-    expect_contains(cyclones$category_code, c("TD", "TS", "STS", "TY", "STY"))
+    expect_contains(bagyo$category_code, c("TD", "TS", "STS", "TY", "STY"))
   }
 )
 

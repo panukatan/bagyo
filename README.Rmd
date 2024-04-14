@@ -48,24 +48,24 @@ install.packages(
 )
 ```
 
-Once the `bagyo` package has been installed, the `cyclones` dataset can be loaded into R as follows:
+Once the `bagyo` package has been installed, the `bagyo` dataset can be loaded into R as follows:
 
 ```{r load-dataset}
 library(bagyo)
 data(package = "bagyo")
 
-cyclones
+bagyo
 ```
 
 ## Usage
 
-### `cyclones` are interesting to summarise
+### `bagyo` is interesting to summarise
 
 ```{r summary}
 library(dplyr)
 
 ## Get cyclone category mean pressure and speed ----
-cyclones |>
+bagyo |>
   group_by(category_name) |>
   summarise(
     n = n(),
@@ -74,23 +74,23 @@ cyclones |>
   )
 ```
 
-### `cyclones` are useful in learning how to work with dates
+### `bagyo` is useful in learning how to work with dates
 
 ```{r working-with-dates}
 ## Get cyclone category mean duration (in hours) ----
-cyclones |>
+bagyo |>
   mutate(duration = end - start) |>
   group_by(category_name) |>
   summarise(mean_duration = mean(duration))
 ```
 
-### `cyclones` are great to visualise
+### `bagyo` are great to visualise
 
 ```{r barplot, echo = FALSE, fig.align = "center", fig.height = 4}
 library(ggplot2)
 
 ## Get cyclone category mean duration (in hours) ----
-cyclones |>
+bagyo |>
   mutate(duration = end - start) |>
   group_by(category_name) |>
   summarise(mean_duration = mean(duration)) |>
@@ -112,7 +112,7 @@ cyclones |>
 
 ```{r scatterplot, echo = FALSE, fig.align = "center", fig.height = 5, fig.width = 8}
 ## Cyclone speed by presssure ----
-cyclones |>
+bagyo |>
   dplyr::mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = speed, y = pressure)) +
   geom_point(mapping = aes(colour = category_name), size = 3, alpha = 0.5) +
