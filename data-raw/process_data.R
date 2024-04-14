@@ -373,7 +373,7 @@ df_2020 <- set1_2020 |>
 
 
 ## Concatenate ----
-cyclones <- rbind(df_2017, df_2018, df_2019, df_2020) |>
+bagyo <- rbind(df_2017, df_2018, df_2019, df_2020) |>
   dplyr::mutate(
     year = lubridate::year(warning_start), .before = category_code
   ) |>
@@ -387,6 +387,6 @@ cyclones <- rbind(df_2017, df_2018, df_2019, df_2020) |>
   )
 
 ## Export data ----
-usethis::use_data(cyclones, overwrite = TRUE, compress = "xz")
+usethis::use_data(bagyo, overwrite = TRUE, compress = "xz")
 
 

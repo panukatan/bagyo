@@ -26,13 +26,13 @@ library(lubridate)
 
 ## Data wrangling
 
-Following are some examples of how the `cyclones` dataset can be used to demonstrate various data wrangling approaches, particularly those using the `tidyverse` packages.
+Following are some examples of how the `bagyo` dataset can be used to demonstrate various data wrangling approaches, particularly those using the `tidyverse` packages.
 
 ### Creating summaries
 
 ```{r summary1}
 ## Get number of cyclone categories per year ----
-cyclones |>
+bagyo |>
   group_by(year, category_name) |>
   count() |>
   group_by(year) |>
@@ -42,14 +42,14 @@ cyclones |>
 
 ```{r summary2}
 ## Get yearly mean cyclone pressure and speed ----
-cyclones |>
+bagyo |>
   group_by(year) |>
   summarise(mean_pressure = mean(pressure), mean_speed = mean(speed))
 ```
 
 ```{r summary3}
 ## Get cyclone category mean pressure and speed ----
-cyclones |>
+bagyo |>
   group_by(category_name) |>
   summarise(
     n = n(),
@@ -62,7 +62,7 @@ cyclones |>
 
 ```{r working-with-dates1}
 ## Get cyclone category mean duration (in hours) ----
-cyclones |>
+bagyo |>
   mutate(duration = end - start) |>
   group_by(category_name) |>
   summarise(mean_duration = mean(duration))
@@ -70,7 +70,7 @@ cyclones |>
 
 ```{r working-with-dates2}
 ## Get number of cyclones per month by year ----
-cyclones |>
+bagyo |>
   mutate(month = month(start, label = TRUE)) |>
   group_by(month, year) |>
   count() |>
@@ -81,13 +81,13 @@ cyclones |>
 
 ## Data visualisation
 
-Following are some examples of how the `cyclones` dataset can be used to demonstrate various data visualisation approaches, particularly those using the `tidyverse` and `ggplot2` packages.
+Following are some examples of how the `bagyo` dataset can be used to demonstrate various data visualisation approaches, particularly those using the `tidyverse` and `ggplot2` packages.
 
 ### Bar plots
 
 ```{r barplot, fig.align = "center", fig.height = 4}
 ## Get cyclone category mean duration (in hours) ----
-cyclones |>
+bagyo |>
   mutate(duration = end - start) |>
   group_by(category_name) |>
   summarise(mean_duration = mean(duration)) |>
@@ -111,7 +111,7 @@ cyclones |>
 
 ```{r scatterplot1, fig.align = "center", fig.height = 5, fig.width = 8}
 ## Cyclone speed by presssure ----
-cyclones |>
+bagyo |>
   dplyr::mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = speed, y = pressure)) +
   geom_point(mapping = aes(colour = category_name), size = 3, alpha = 0.5) +
@@ -138,7 +138,7 @@ cyclones |>
 ```
 
 ```{r scatterplot2, fig.align = "center", fig.height = 5}
-cyclones |>
+bagyo |>
   mutate(
     year = factor(year),
     duration = as.numeric(end - start)
@@ -168,7 +168,7 @@ cyclones |>
 
 ```{r time-series, fig.align = "center", fig.height = 4, fig.width = 8}
 ## Get number of cyclones per month by year and plot ----
-cyclones |>
+bagyo |>
   mutate(month = month(start, label = TRUE)) |>
   group_by(month, year) |>
   count() |>
@@ -200,7 +200,7 @@ cyclones |>
 ### Distribution plots
 
 ```{r boxplot, fig.align = "center"}
-cyclones |>
+bagyo |>
   mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = year, y = speed)) +
   geom_boxplot(colour = "#4b876e", fill = "#4b876e", alpha = 0.5) +
@@ -215,7 +215,7 @@ cyclones |>
 
 
 ```{r boxplot-jitter, fig.align = "center"}
-cyclones |>
+bagyo |>
   mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = year, y = speed)) +
   geom_boxplot(colour = "#4b876e") +
@@ -233,7 +233,7 @@ cyclones |>
 ```
 
 ```{r violin-jitter, fig.align = "center"}
-cyclones |>
+bagyo |>
   mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = year, y = speed)) +
   geom_violin(colour = "#4b876e", fill = "#4b876e", alpha = 0.5) +
