@@ -34,6 +34,9 @@ get_bagyo <- function() {
 #'
 #' @returns Printed output of [get_bagyo()] function
 #'
+#' @examples
+#' get_bagyo()
+#'
 #' @export
 #'
 

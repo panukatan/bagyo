@@ -17,3 +17,7 @@ Printed output of \code{\link[=get_bagyo]{get_bagyo()}} function
 \description{
 \code{\link[=print]{print()}} helper function for \code{\link[=get_bagyo]{get_bagyo()}} function
 }
+\examples{
+get_bagyo()
+
+}
