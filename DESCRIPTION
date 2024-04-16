@@ -6,7 +6,7 @@ Authors@R: person(given = "Ernest",
                   family = "Guevarra", 
                   comment = c(ORCID = "0000-0002-4887-4415"), 
                   email = "ernest@guevarra.io", 
-                  role = c("aut", "cre"))
+                  role = c("aut", "cre", "cph"))
 Description: The Philippines frequently experiences tropical cyclones (called
     'bagyo' in the Filipino language) because of its geographical position. 
     These cyclones typically bring heavy rainfall, leading to widespread 
