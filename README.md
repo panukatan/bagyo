@@ -15,6 +15,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![Codecov test
 coverage](https://codecov.io/gh/panukatan/bagyo/branch/main/graph/badge.svg)](https://app.codecov.io/gh/panukatan/bagyo?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/panukatan/bagyo/badge)](https://www.codefactor.io/repository/github/panukatan/bagyo)
+[![DOI](https://zenodo.org/badge/314686124.svg)](https://zenodo.org/doi/10.5281/zenodo.10972234)
 <!-- badges: end -->
 
 Oceans and seas significantly impact continental weather, with
@@ -141,8 +142,10 @@ citation provided by a call to the `citation()` function as follows:
 citation("bagyo")
 #> To cite bagyo in publications use:
 #> 
-#>   Ernest Guevarra (2024). _bagyo: Philippine Tropical Cyclones Data_. R
-#>   package version 0.0.0.9000, <https://panukatan.io/bagyo/>.
+#>   Ernest Guevarra (2024). _bagyo: Philippine Tropical Cyclones Data_.
+#>   doi:10.5281/zenodo.10972235
+#>   <https://doi.org/10.5281/zenodo.10972235>, R package version 0.1.0,
+#>   <https://panukatan.io/bagyo/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -150,8 +153,9 @@ citation("bagyo")
 #>     title = {bagyo: Philippine Tropical Cyclones Data},
 #>     author = {{Ernest Guevarra}},
 #>     year = {2024},
-#>     note = {R package version 0.0.0.9000},
+#>     note = {R package version 0.1.0},
 #>     url = {https://panukatan.io/bagyo/},
+#>     doi = {10.5281/zenodo.10972235},
 #>   }
 ```
 

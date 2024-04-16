@@ -29,6 +29,7 @@ library(tibble)
 [![test-coverage](https://github.com/panukatan/bagyo/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/test-coverage.yaml)
 [![Codecov test coverage](https://codecov.io/gh/panukatan/bagyo/branch/main/graph/badge.svg)](https://app.codecov.io/gh/panukatan/bagyo?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/panukatan/bagyo/badge)](https://www.codefactor.io/repository/github/panukatan/bagyo)
+[![DOI](https://zenodo.org/badge/314686124.svg)](https://zenodo.org/doi/10.5281/zenodo.10972234)
 <!-- badges: end -->
 
 Oceans and seas significantly impact continental weather, with evaporation from the sea surface driving cloud formation and precipitation. Tropical cyclones, warm-core low-pressure systems, form over warm oceans where temperatures exceed 26°C, precipitated by the release of latent heat from condensation. These cyclones, known by various names depending on the region, have organised circulations and develop primarily in tropical and subtropical waters, except in regions with cooler sea surface temperatures and high vertical wind shears. They reach peak intensity over warm tropical waters and weaken upon landfall, often causing extensive damage before dissipating.

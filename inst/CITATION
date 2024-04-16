@@ -4,6 +4,7 @@ bibentry(
   title    = "bagyo: Philippine Tropical Cyclones Data",
   author   = person("Ernest Guevarra"),
   year     = "2024",
-  note     = "R package version 0.0.0.9000",
-  url      = "https://panukatan.io/bagyo/"
+  note     = "R package version 0.1.0",
+  url      = "https://panukatan.io/bagyo/",
+  doi      = "10.5281/zenodo.10972235"
 )
