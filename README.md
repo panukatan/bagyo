@@ -50,8 +50,14 @@ dataset.
 
 ## Installation
 
-`bagyo` is not yet on CRAN but can be installed from the [panukatan R
-universe](https://panukatan.r-universe.dev) as follows:
+You can install `bagyo` from [CRAN](https://cran.r-project.org) with:
+
+``` r
+install.packages("bagyo")
+```
+
+You can install the development version of `bagyo` from the [panukatan
+r-universe](https://panukatan.r-universe.dev) with:
 
 ``` r
 install.packages(
