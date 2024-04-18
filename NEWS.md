@@ -1,4 +1,4 @@
-# bagyo 0.1.0
+# bagyo 0.1.1
 
 This is the first CRAN release of `bagyo`.
 

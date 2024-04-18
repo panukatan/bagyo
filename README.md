@@ -10,6 +10,13 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/bagyo)](https://CRAN.R-project.org/package=bagyo)
+[![cran
+checks](https://badges.cranchecks.info/worst/bagyo.svg)](https://cran.r-project.org/web/checks/check_results_bagyo.html)
+[![CRAN](https://img.shields.io/cran/l/bagyo.svg)](https://CRAN.R-project.org/package=bagyo)
+[![CRAN](http://cranlogs.r-pkg.org/badges/bagyo)](https://cran.r-project.org/package=bagyo)
+[![CRAN](http://cranlogs.r-pkg.org/badges/grand-total/bagyo)](https://cran.r-project.org/package=bagyo)
 [![R-CMD-check](https://github.com/panukatan/bagyo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/R-CMD-check.yaml)
 [![R-hub](https://github.com/panukatan/bagyo/actions/workflows/rhub.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/rhub.yaml)
 [![test-coverage](https://github.com/panukatan/bagyo/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/test-coverage.yaml)
