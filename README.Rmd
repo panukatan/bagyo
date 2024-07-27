@@ -43,7 +43,7 @@ Oceans and seas significantly impact continental weather, with evaporation from 
 
 The Philippines frequently experiences tropical cyclones (called ***bagyo*** - pronounced /baɡˈjo/, [bɐɡˈjo] - in the Filipino language) because of its geographical position. These cyclones typically bring heavy rainfall, leading to widespread flooding, as well as strong winds that cause significant damage to human life, crops, and property. Data on cyclones are collected and curated by the [Philippine Atmospheric, Geophysical, and Astronomical Services Administration (PAGASA)](https://www.pagasa.dost.gov.ph/).
 
-This package contains Philippine tropical cyclones data from 2017 to 2020 in a machine-readable format. It is hoped that this data package provides an interesting and unique dataset for data exploration and visualisation as an adjunct to the traditional [`iris`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html) dataset and to the current [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/) dataset.
+This package contains Philippine tropical cyclones data from 2017 to 2021 in a machine-readable format. It is hoped that this data package provides an interesting and unique dataset for data exploration and visualisation as an adjunct to the traditional [`iris`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html) dataset and to the current [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/) dataset.
 
 ## Installation
 
@@ -140,7 +140,7 @@ bagyo |>
     x = "wind speed (km/h)",
     y = "central pressure (hPa)"
   ) +
-  facet_wrap(. ~ year, ncol = 4) +
+  facet_wrap(. ~ year, ncol = 5) +
   theme_bw() +
   theme(
     legend.position = "top",

@@ -1,5 +1,8 @@
 # bagyo v0.1.1.9000
 
+* added CRAN DOI badge
+* added 2021 typhoon data
+
 
 # bagyo 0.1.1
 
