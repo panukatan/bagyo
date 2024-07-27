@@ -13,8 +13,9 @@ urls <- paste0(
   2017:2021, ".pdf"
 )
 
+
 Map(
-  f = download.file,
+  f = pagasa_download_cyclone_reports,
   url = as.list(urls),
   destfile = as.list(
     paste0("data-raw/", 2017:2021, ".pdf")
