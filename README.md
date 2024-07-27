@@ -82,7 +82,7 @@ library(bagyo)
 data(package = "bagyo")
 
 bagyo
-#> # A tibble: 86 × 9
+#> # A tibble: 101 × 9
 #>     year category_code category_name         name  rsmc_name start              
 #>    <dbl> <fct>         <fct>                 <chr> <chr>     <dttm>             
 #>  1  2017 TD            Tropical Depression   Auri… <NA>      2017-01-07 08:00:00
@@ -95,7 +95,7 @@ bagyo
 #>  8  2017 TS            Tropical Storm        Huan… Haitang   2017-07-30 02:00:00
 #>  9  2017 STS           Severe Tropical Storm Isang Hato      2017-08-20 08:00:00
 #> 10  2017 TS            Tropical Storm        Joli… Pakhar    2017-08-24 14:00:00
-#> # ℹ 76 more rows
+#> # ℹ 91 more rows
 #> # ℹ 3 more variables: end <dttm>, pressure <int>, speed <int>
 ```
 
@@ -117,11 +117,11 @@ bagyo |>
 #> # A tibble: 5 × 4
 #>   category_name             n mean_pressure mean_speed
 #>   <fct>                 <int>         <dbl>      <dbl>
-#> 1 Tropical Depression      23          996.       39.8
-#> 2 Tropical Storm           25          986.       61.6
-#> 3 Severe Tropical Storm    15          978.       75  
-#> 4 Typhoon                  21          941.      102. 
-#> 5 Super Typhoon             2          908.      112.
+#> 1 Tropical Depression      27          995.       39.3
+#> 2 Tropical Storm           29          987.       58.8
+#> 3 Severe Tropical Storm    17          979.       72.6
+#> 4 Typhoon                  23          943.       99.1
+#> 5 Super Typhoon             5          907       113
 ```
 
 ### `bagyo` is useful in learning how to work with dates
@@ -135,11 +135,11 @@ bagyo |>
 #> # A tibble: 5 × 2
 #>   category_name         mean_duration  
 #>   <fct>                 <drtn>         
-#> 1 Tropical Depression    46.69565 hours
-#> 2 Tropical Storm         57.48000 hours
-#> 3 Severe Tropical Storm  79.13333 hours
-#> 4 Typhoon               106.66667 hours
-#> 5 Super Typhoon          77.50000 hours
+#> 1 Tropical Depression    45.29630 hours
+#> 2 Tropical Storm         61.03448 hours
+#> 3 Severe Tropical Storm  81.29412 hours
+#> 4 Typhoon               110.04348 hours
+#> 5 Super Typhoon         115.60000 hours
 ```
 
 ### `bagyo` is great to visualise

@@ -151,12 +151,12 @@ bagyo |>
     mapping = aes(colour = year), method = "lm", se = FALSE, linewidth = 0.75
   ) +
   scale_colour_manual(
-    values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72")
+    values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72", "#5d0505")
   ) +
-  scale_shape_manual(values = 15:18) +
+  scale_shape_manual(values = 15:19) +
   labs(
     title = "Maximum sustained wind speed by duration of cyclones",
-    subtitle = "2017-2020",
+    subtitle = "2017-2021",
     x = "speed (km/h)", y = "duration (hours)",
     colour = "Year", shape = "Year"
   ) +
@@ -180,7 +180,7 @@ bagyo |>
   scale_y_continuous(breaks = seq(from = 0, to = 6, by = 1)) +
   labs(
     title = "Number of cyclones over time",
-    subtitle = "2017-2020",
+    subtitle = "2017-2021",
     x = NULL,
     y = "n"
   ) +
@@ -206,7 +206,7 @@ bagyo |>
   geom_boxplot(colour = "#4b876e", fill = "#4b876e", alpha = 0.5) +
   labs(
     title = "Distribution of tropical cyclone maximum sustained wind speed",
-    subtitle = "2017-2022",
+    subtitle = "2017-2021",
     x = NULL, y = "speed (km/h)"
   ) +
   theme_minimal() +
@@ -225,7 +225,7 @@ bagyo |>
   ) +
   labs(
     title = "Distribution of tropical cyclone maximum sustained wind speed",
-    subtitle = "2017-2022",
+    subtitle = "2017-2021",
     x = NULL, y = "speed (km/h)"
   ) +
   theme_minimal() +
@@ -240,7 +240,7 @@ bagyo |>
   geom_jitter(colour = "#4b876e", size = 3, width = 0.2) +
   labs(
     title = "Distribution of tropical cyclone maximum sustained wind speed",
-    subtitle = "2017-2022",
+    subtitle = "2017-2021",
     x = NULL, y = "speed (km/h)"
   ) +
   theme_minimal() +
