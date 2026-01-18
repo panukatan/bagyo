@@ -13,8 +13,10 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-"
 )
 
-bagyo_colours <- c("#e5be72", "#4d4d4d", "#5ada3d", "#5630d3", "#e51707",
-                   "#9c5e60", "#465b92", "#4b876e", "#152127", "#5d0505")
+bagyo_colours <- c(
+  "#e5be72", "#4d4d4d", "#5ada3d", "#5630d3", "#e51707",
+  "#9c5e60", "#465b92", "#4b876e", "#152127", "#5d0505"
+)
 
 library(bagyo)
 library(tibble)
@@ -33,7 +35,7 @@ library(tibble)
 [![R-CMD-check](https://github.com/panukatan/bagyo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/R-CMD-check.yaml)
 [![R-hub](https://github.com/panukatan/bagyo/actions/workflows/rhub.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/rhub.yaml)
 [![test-coverage](https://github.com/panukatan/bagyo/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/test-coverage.yaml)
-[![Codecov test coverage](https://codecov.io/gh/panukatan/bagyo/branch/main/graph/badge.svg)](https://app.codecov.io/gh/panukatan/bagyo?branch=main)
+[![Codecov test coverage](https://codecov.io/gh/panukatan/bagyo/graph/badge.svg)](https://app.codecov.io/gh/panukatan/bagyo)
 [![CodeFactor](https://www.codefactor.io/repository/github/panukatan/bagyo/badge)](https://www.codefactor.io/repository/github/panukatan/bagyo)
 [![DOI](https://zenodo.org/badge/314686124.svg)](https://zenodo.org/doi/10.5281/zenodo.10972234)
 [![DOI](https://img.shields.io/badge/DOI-10.32614/CRAN.package.bagyo-blue)](https://doi.org/10.32614/CRAN.package.bagyo)
@@ -132,7 +134,10 @@ bagyo |>
   geom_point(mapping = aes(colour = category_name), size = 3, alpha = 0.5) +
   scale_colour_manual(
     name = NULL,
-    values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72", "#5d0505")
+    values = c(
+      "#9c5e60", "#4b876e", "#465b92", 
+      "#e5be72", "#5d0505", "#5630d3"
+    )
   ) +
   labs(
     title = "Cyclone maximum sustained wind speed and maximum central pressure",

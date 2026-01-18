@@ -1,7 +1,7 @@
 #'
 #' Table of tropical cyclones that entered the Philippines from 2017 to 2020
 #'
-#' @format A data frame with 9 columns and 86 rows:
+#' @format A data frame with 9 columns and 119 rows:
 #'
 #' | **Variable** | **Description** |
 #' | :--- | :--- |

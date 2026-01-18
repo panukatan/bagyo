@@ -5,7 +5,7 @@
 \alias{bagyo}
 \title{Philippine Tropical Cyclones Data}
 \format{
-A data frame with 9 columns and 86 rows:\tabular{ll}{
+A data frame with 9 columns and 119 rows:\tabular{ll}{
    \strong{Variable} \tab \strong{Description} \cr
    \emph{year} \tab Year \cr
    \emph{category_code} \tab Tropical cyclone category code \cr

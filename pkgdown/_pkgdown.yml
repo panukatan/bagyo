@@ -5,6 +5,8 @@ url: https://panukatan.io/bagyo/
 development:
   mode: auto
 
+llm-docs: false
+
 template:
   bootstrap: 5
   bootswatch: cosmo

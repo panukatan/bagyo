@@ -117,7 +117,10 @@ bagyo |>
   geom_point(mapping = aes(colour = category_name), size = 3, alpha = 0.5) +
   scale_colour_manual(
     name = NULL,
-    values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72", "#5d0505")
+    values = c(
+      "#9c5e60", "#4b876e", "#465b92", 
+      "#e5be72", "#5d0505", "#5630d3"
+    )
   ) +
   labs(
     title = "Cyclone maximum sustained wind speed and maximum central pressure",
@@ -151,9 +154,12 @@ bagyo |>
     mapping = aes(colour = year), method = "lm", se = FALSE, linewidth = 0.75
   ) +
   scale_colour_manual(
-    values = c("#9c5e60", "#4b876e", "#465b92", "#e5be72", "#5d0505")
+    values = c(
+      "#9c5e60", "#4b876e", "#465b92", 
+      "#e5be72", "#5d0505", "#5630d3"
+    )
   ) +
-  scale_shape_manual(values = 15:19) +
+  scale_shape_manual(values = c(15:19, 8)) +
   labs(
     title = "Maximum sustained wind speed by duration of cyclones",
     subtitle = "2017-2021",
