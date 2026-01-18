@@ -1,14 +1,43 @@
-## Resubmission
-This is a resubmission. In this version I have:
 
-* Added a URL link in angle brackets in the DESCRIPTION file for the web
-service used.
+## Release summary
 
-* Removed extra/unnecessary spaces taking into account that linebreaks are
-counted as spaces too.
+This is a minor release of the `{bagyo}` package.
+
+* added R (>= 4.1.0) dependency for use of base pipe operator
+* added CRAN DOI badge
+* added 2021 and 2022 typhoon data
+* added CITATION.cff
+* added an unexported utility function to download cyclone reports
+
+## Test environments
+* local OS X install, R 4.5.2
+* local ubuntu 24.04 install, R 4.5.2
+* win-builder (devel, release, and old release)
+* github actions windows-latest, r: release
+* github actions macOS-latest, r: release
+* github actions ubuntu-24.04, r: release, devel, old release
+* rhub windows-latest r devel
+* rhub ubuntu 24.04 r devel
+* rhub macos r devel
+* rhub macos-arm64 r devel
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+### Local checks
 
-* This is a new release.
+0 errors | 0 warnings | 0 notes
+
+### win-builder checks
+
+0 errors | 0 warnings | 0 notes
+
+### GitHub Actions checks
+
+0 errors | 0 warnings | 0 notes
+
+### rhub checks
+
+0 errors | 0 warnings | 0 notes
+
+
+

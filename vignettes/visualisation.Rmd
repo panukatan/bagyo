@@ -109,8 +109,8 @@ bagyo |>
 
 ### Scatter plots
 
-```{r scatterplot1, fig.align = "center", fig.height = 5, fig.width = 8}
-## Cyclone speed by presssure ----
+```{r scatterplot1, fig.align = "center", fig.height = 6, fig.width = 8}
+## Cyclone speed by pressure ----
 bagyo |>
   dplyr::mutate(year = factor(year)) |>
   ggplot(mapping = aes(x = speed, y = pressure)) +
@@ -118,8 +118,7 @@ bagyo |>
   scale_colour_manual(
     name = NULL,
     values = c(
-      "#9c5e60", "#4b876e", "#465b92", 
-      "#e5be72", "#5d0505", "#5630d3"
+      "#9c5e60", "#4b876e", "#465b92", "#e5be72", "#5d0505"
     )
   ) +
   labs(
@@ -128,7 +127,7 @@ bagyo |>
     x = "wind speed (km/h)",
     y = "central pressure (hPa)"
   ) +
-  facet_wrap(. ~ year, ncol = 4) +
+  facet_wrap(. ~ year, ncol = 3) +
   theme_bw() +
   theme(
     legend.position = "top",
@@ -140,7 +139,7 @@ bagyo |>
   )
 ```
 
-```{r scatterplot2, fig.align = "center", fig.height = 5}
+```{r scatterplot2, fig.align = "center", fig.height = 6}
 bagyo |>
   mutate(
     year = factor(year),
@@ -172,7 +171,7 @@ bagyo |>
 
 ### Time series
 
-```{r time-series, fig.align = "center", fig.height = 4, fig.width = 8}
+```{r time-series, fig.align = "center", fig.height = 6, fig.width = 8}
 ## Get number of cyclones per month by year and plot ----
 bagyo |>
   mutate(month = month(start, label = TRUE)) |>
@@ -190,7 +189,7 @@ bagyo |>
     x = NULL,
     y = "n"
   ) +
-  facet_wrap(. ~ year, ncol = 4) +
+  facet_wrap(. ~ year, ncol = 3) +
   theme_bw() +
   theme(
     strip.background = element_rect(
