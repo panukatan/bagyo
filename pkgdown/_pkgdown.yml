@@ -5,12 +5,25 @@ url: https://panukatan.io/bagyo/
 development:
   mode: auto
 
+llm-docs: false
+
 template:
   bootstrap: 5
-  bootswatch: cosmo
-  theme: haddock
-  params:
-    ganalytics: G-X1ZN78D257
+  theme: breeze-light
+  bslib:
+    bootswatch: pulse    
+    pkgdown-nav-height: 100px
+  includes:
+    in_header: |
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-X1ZN78D257"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-X1ZN78D257');
+      </script>
 
 home:
   links:
@@ -18,8 +31,8 @@ home:
     href: https://www.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report
 
 navbar:
-  bg: info
-  type: light
+  bg: primary
+  type: dark
   structure:
     left:  [home, intro, reference, articles, news]
     right: [website, mastodon, linkedin, github]
@@ -33,16 +46,17 @@ navbar:
       menu:
       - text: "Data Wrangling and Visualisation"
         href: articles/visualisation.html
-    # website:
-    #   icon: "fa-regular fa-globe fa-lg"
-    #   href: https://ernest.guevarra.io
-    # mastodon:
-    #   icon: "fab fa-mastodon fa-lg"
-    #   href: https://fosstodon.org/@ernestguevarra
+    website:
+      icon: "fa-globe fa-lg"
+      href: https://panukatan.io
+      aria-label: globe
+    mastodon:
+      icon: "fab fa-mastodon fa-lg"
+      href: https://mastodon.social/@panukatan
+      aria-label: mastodon
     # linkedin:
     #   icon: "fab fa-linkedin fa-lg"
     #   href: https://www.linkedin.com/in/ernestguevarra
-
 
 reference:
   - title: Datasets

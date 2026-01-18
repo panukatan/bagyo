@@ -10,9 +10,10 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/bagyo)](https://CRAN.R-project.org/package=bagyo)
-[![cran
+<a href="https://CRAN.R-project.org/package=bagyo"
+class="pkgdown-release"><img
+src="https://www.r-pkg.org/badges/version/bagyo"
+alt="CRAN status" /></a> [![cran
 checks](https://badges.cranchecks.info/worst/bagyo.svg)](https://cran.r-project.org/web/checks/check_results_bagyo.html)
 [![CRAN](https://img.shields.io/cran/l/bagyo.svg)](https://CRAN.R-project.org/package=bagyo)
 [![CRAN](http://cranlogs.r-pkg.org/badges/bagyo)](https://cran.r-project.org/package=bagyo)
@@ -21,11 +22,15 @@ checks](https://badges.cranchecks.info/worst/bagyo.svg)](https://cran.r-project.
 [![R-hub](https://github.com/panukatan/bagyo/actions/workflows/rhub.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/rhub.yaml)
 [![test-coverage](https://github.com/panukatan/bagyo/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/panukatan/bagyo/actions/workflows/test-coverage.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/panukatan/bagyo/branch/main/graph/badge.svg)](https://app.codecov.io/gh/panukatan/bagyo?branch=main)
+coverage](https://codecov.io/gh/panukatan/bagyo/graph/badge.svg)](https://app.codecov.io/gh/panukatan/bagyo)
 [![CodeFactor](https://www.codefactor.io/repository/github/panukatan/bagyo/badge)](https://www.codefactor.io/repository/github/panukatan/bagyo)
-[![DOI](https://zenodo.org/badge/314686124.svg)](https://zenodo.org/doi/10.5281/zenodo.10972234)
-[![DOI](https://img.shields.io/badge/DOI-10.32614/CRAN.package.bagyo-blue)](https://doi.org/10.32614/CRAN.package.bagyo)
-<!-- badges: end -->
+<a href="https://zenodo.org/doi/10.5281/zenodo.10972234"
+class="pkgdown-release"><img
+src="https://zenodo.org/badge/314686124.svg" alt="DOI" /></a>
+<a href="https://doi.org/10.32614/CRAN.package.bagyo"
+class="pkgdown-release"><img
+src="https://img.shields.io/badge/DOI-10.32614/CRAN.package.bagyo-blue"
+alt="DOI" /></a> <!-- badges: end -->
 
 Oceans and seas significantly impact continental weather, with
 evaporation from the sea surface driving cloud formation and
@@ -48,7 +53,7 @@ Atmospheric, Geophysical, and Astronomical Services Administration
 (PAGASA)](https://www.pagasa.dost.gov.ph/).
 
 This package contains Philippine tropical cyclones data from 2017 to
-2020 in a machine-readable format. It is hoped that this data package
+2022 in a machine-readable format. It is hoped that this data package
 provides an interesting and unique dataset for data exploration and
 visualisation as an adjunct to the traditional
 [`iris`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html)
@@ -64,8 +69,19 @@ You can install `bagyo` from [CRAN](https://cran.r-project.org) with:
 install.packages("bagyo")
 ```
 
-You can install the development version of `bagyo` from the [panukatan
-r-universe](https://panukatan.r-universe.dev) with:
+<div class="pkgdown-devel">
+
+You can install the development version of `bagyo` from
+[GitHub](https://github.com/panukatan/bagyo) using `pak` with:
+
+``` r
+## Install pak as needed ----
+## install.packages("pak")
+pak::pak("panukatan/bagyo")
+```
+
+You can also install `bagyo` from the [panukatan R
+Universe](https://panukatan.r-universe.dev) with:
 
 ``` r
 install.packages(
@@ -73,6 +89,8 @@ install.packages(
   repos = c('https://panukatan.r-universe.dev', 'https://cloud.r-project.org')
 )
 ```
+
+</div>
 
 Once the `bagyo` package has been installed, the `bagyo` dataset can be
 loaded into R as follows:
@@ -82,7 +100,7 @@ library(bagyo)
 data(package = "bagyo")
 
 bagyo
-#> # A tibble: 101 × 9
+#> # A tibble: 119 × 9
 #>     year category_code category_name         name  rsmc_name start              
 #>    <dbl> <fct>         <fct>                 <chr> <chr>     <dttm>             
 #>  1  2017 TD            Tropical Depression   Auri… <NA>      2017-01-07 08:00:00
@@ -95,7 +113,7 @@ bagyo
 #>  8  2017 TS            Tropical Storm        Huan… Haitang   2017-07-30 02:00:00
 #>  9  2017 STS           Severe Tropical Storm Isang Hato      2017-08-20 08:00:00
 #> 10  2017 TS            Tropical Storm        Joli… Pakhar    2017-08-24 14:00:00
-#> # ℹ 91 more rows
+#> # ℹ 109 more rows
 #> # ℹ 3 more variables: end <dttm>, pressure <int>, speed <int>
 ```
 
@@ -117,11 +135,11 @@ bagyo |>
 #> # A tibble: 5 × 4
 #>   category_name             n mean_pressure mean_speed
 #>   <fct>                 <int>         <dbl>      <dbl>
-#> 1 Tropical Depression      27          995.       39.3
-#> 2 Tropical Storm           29          987.       58.8
-#> 3 Severe Tropical Storm    17          979.       72.6
-#> 4 Typhoon                  23          943.       99.1
-#> 5 Super Typhoon             5          907       113
+#> 1 Tropical Depression      32          995.       39.1
+#> 2 Tropical Storm           33          988.       56.8
+#> 3 Severe Tropical Storm    20          978.       71.8
+#> 4 Typhoon                  26          944.       97.7
+#> 5 Super Typhoon             8          911.      110
 ```
 
 ### `bagyo` is useful in learning how to work with dates
@@ -135,31 +153,31 @@ bagyo |>
 #> # A tibble: 5 × 2
 #>   category_name         mean_duration  
 #>   <fct>                 <drtn>         
-#> 1 Tropical Depression    45.29630 hours
-#> 2 Tropical Storm         61.03448 hours
-#> 3 Severe Tropical Storm  81.29412 hours
-#> 4 Typhoon               110.04348 hours
-#> 5 Super Typhoon         115.60000 hours
+#> 1 Tropical Depression    46.01562 hours
+#> 2 Tropical Storm         60.36364 hours
+#> 3 Severe Tropical Storm  80.58333 hours
+#> 4 Typhoon               105.37821 hours
+#> 5 Super Typhoon          97.06250 hours
 ```
 
 ### `bagyo` is great to visualise
 
-<img src="man/figures/README-barplot-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-barplot-1.png" alt="" style="display: block; margin: auto;" />
 
-<img src="man/figures/README-scatterplot-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-scatterplot-1.png" alt="" style="display: block; margin: auto;" />
 
 ## Citation
 
-If you find the `bagyo` package useful please cite using the suggested
-citation provided by a call to the `citation()` function as follows:
+To cite `bagyo` in your work, please use the citation provided by a call
+to the `citation()` function as follows:
 
 ``` r
 citation("bagyo")
 #> To cite bagyo in publications use:
 #> 
-#>   Ernest Guevarra (2024). _bagyo: Philippine Tropical Cyclones Data_.
+#>   Ernest Guevarra (2026). _bagyo: Philippine Tropical Cyclones Data_.
 #>   doi:10.5281/zenodo.10972235
-#>   <https://doi.org/10.5281/zenodo.10972235>, R package version 0.1.1,
+#>   <https://doi.org/10.5281/zenodo.10972235>, R package version 0.2.0,
 #>   <https://panukatan.io/bagyo/>.
 #> 
 #> A BibTeX entry for LaTeX users is
@@ -167,12 +185,18 @@ citation("bagyo")
 #>   @Manual{,
 #>     title = {bagyo: Philippine Tropical Cyclones Data},
 #>     author = {{Ernest Guevarra}},
-#>     year = {2024},
-#>     note = {R package version 0.1.1},
+#>     year = {2026},
+#>     note = {R package version 0.2.0},
 #>     url = {https://panukatan.io/bagyo/},
 #>     doi = {10.5281/zenodo.10972235},
 #>   }
 ```
+
+You can also use the [citation provided by
+GitHub](https://github.com/panukatan/bagyo), generated from the
+information in the project’s
+[CITATION.cff](https://github.com/panukatan/bagyo/blob/main/CITATION.cff)
+file.
 
 ## Community guidelines
 
