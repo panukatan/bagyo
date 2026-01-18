@@ -1,48 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://panukatan.io/bagyo/404.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/articles/bagyo.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/articles/visualisation.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/index.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/reference/bagyo.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/reference/find_bagyo.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/reference/get_bagyo.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://panukatan.io/bagyo/reference/print.bagyo.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://panukatan.io/bagyo/404.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/CONTRIBUTING.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/LICENSE.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/articles/bagyo.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/articles/index.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/articles/visualisation.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/authors.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/index.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/news/index.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/reference/bagyo.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/reference/find_bagyo.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/reference/get_bagyo.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/reference/index.html</loc></url>
+<url><loc>https://panukatan.io/bagyo/reference/print.bagyo.html</loc></url>
 </urlset>
+
