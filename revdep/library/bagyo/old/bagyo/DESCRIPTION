@@ -1,0 +1,40 @@
+Package: bagyo
+Type: Package
+Title: Philippine Tropical Cyclones Data
+Version: 0.1.1
+Authors@R: person(given = "Ernest", 
+                  family = "Guevarra", 
+                  comment = c(ORCID = "0000-0002-4887-4415"), 
+                  email = "ernest@guevarra.io", 
+                  role = c("aut", "cre", "cph"))
+Description: The Philippines frequently experiences tropical cyclones (called
+    'bagyo' in the Filipino language) because of its geographical position.
+    These cyclones typically bring heavy rainfall, leading to widespread
+    flooding, as well as strong winds that cause significant damage to human
+    life, crops, and property. Data on cyclones are collected and curated by the
+    Philippine Atmospheric, Geophysical, and Astronomical Services
+    Administration or 'PAGASA' and made available through its website
+    <https://bagong.pagasa.dost.gov.ph/tropical-cyclone/publications/annual-report>.
+    This package contains Philippine tropical cyclones data in a
+    machine-readable format. It is hoped that this data package provides an
+    interesting and unique dataset for data exploration and visualisation.
+License: CC0
+Depends: R (>= 2.10)
+Suggests: dplyr, ggplot2, knitr, lubridate, pdftools, rmarkdown,
+        spelling, testthat (>= 3.0.0), tibble, tidyr
+Encoding: UTF-8
+Language: en-GB
+LazyData: true
+RoxygenNote: 7.3.1
+URL: https://panukatan.io/bagyo/, https://github.com/panukatan/bagyo
+BugReports: https://github.com/panukatan/bagyo/issues
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2024-04-17 08:50:25 UTC; ernestguevarra
+Author: Ernest Guevarra [aut, cre, cph]
+    (<https://orcid.org/0000-0002-4887-4415>)
+Maintainer: Ernest Guevarra <ernest@guevarra.io>
+Repository: RSPM
+Date/Publication: 2024-04-18 14:02:48 UTC
+Built: R 4.5.0; ; 2025-04-08 06:20:57 UTC; unix

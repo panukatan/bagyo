@@ -39,5 +39,7 @@ This is a minor release of the `{bagyo}` package.
 
 0 errors | 0 warnings | 0 notes
 
-
+## Reverse dependencies
+`bagyo` doesn't have any downstream / reverse dependencies 
+(see https://github.com/panukatan/bagyo/tree/main/revdep/cran.md)
 
