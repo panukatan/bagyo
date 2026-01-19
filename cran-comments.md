@@ -18,8 +18,8 @@ This is a minor release of the `{bagyo}` package.
 * github actions ubuntu-24.04, r: release, devel, old release
 * rhub windows-latest r devel
 * rhub ubuntu 24.04 r devel
-* rhub macos r devel
 * rhub macos-arm64 r devel
+* mac-builder
 
 ## R CMD check results
 
@@ -39,5 +39,11 @@ This is a minor release of the `{bagyo}` package.
 
 0 errors | 0 warnings | 0 notes
 
+### macbuilder checks
 
+0 errors | 0 warnings | 0 notes
+
+## Reverse dependencies
+`bagyo` doesn't have any downstream / reverse dependencies 
+(see https://github.com/panukatan/bagyo/tree/main/revdep/cran.md)
 
