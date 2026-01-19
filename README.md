@@ -162,9 +162,9 @@ bagyo |>
 
 ### `bagyo` is great to visualise
 
-<img src="man/figures/README-barplot-1.png" alt="" style="display: block; margin: auto;" />
+<img src="man/figures/README-barplot-1.png" style="display: block; margin: auto;" />
 
-<img src="man/figures/README-scatterplot-1.png" alt="" style="display: block; margin: auto;" />
+<img src="man/figures/README-scatterplot-1.png" style="display: block; margin: auto;" />
 
 ## Citation
 
