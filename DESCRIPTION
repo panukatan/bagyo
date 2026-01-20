@@ -1,7 +1,7 @@
 Package: bagyo
 Type: Package
 Title: Philippine Tropical Cyclones Data
-Version: 0.2.0
+Version: 0.2.0.9000
 Authors@R: person(given = "Ernest", 
                   family = "Guevarra", 
                   comment = c(ORCID = "0000-0002-4887-4415"), 
